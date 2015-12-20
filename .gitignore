@@ -1,4 +1,3 @@
-assets/.DS_STORE
-assets/js/.DS_STORE
+.DS_STORE
 .sass-cache
 .idea
