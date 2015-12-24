@@ -23,6 +23,8 @@ To watch for Sass changes run:
 compass watch <path to assets>
 ```
 
+I use (scrollMagic)[http://scrollmagic.io/] for handling scroll events.
+
 To enable development mode for scrollMagic add [this](http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js) plugin. 
 
 Use the following on your scenes to view triggers:
