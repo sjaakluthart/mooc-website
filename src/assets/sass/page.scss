@@ -2,7 +2,7 @@
 @import 'variables';
 
 .logo {
-    @include animation(scaleUp 1s $ease-out-sine);
+    @include animation(scaleUp .5s $ease-out-sine);
     width: 45%;
 
     position: absolute;
@@ -25,14 +25,14 @@ article {
 
 .intro {
     article {
-        @include animation(scaleUp 1s $ease-in-sine);
+        @include animation(scaleUp .5s $ease-in-sine);
         position: absolute;
         top: 40%;
         left: 50%;
     }
 
     .scroll {
-        @include animation(slideUp 1.5s $ease-in-out-back);
+        @include animation(slideUp 1s $ease-in-out-back);
         width: 25%;
 
         position: absolute;

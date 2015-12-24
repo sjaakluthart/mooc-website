@@ -23,7 +23,6 @@ $(document).ready(function(){
         .addIndicators({name: 'pre-production2'}) // add indicators (requires plugin)
         .addTo(controller);
 
-
     new ScrollMagic.Scene({
         triggerElement: '#pre-production3'
     })
