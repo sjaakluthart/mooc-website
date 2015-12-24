@@ -10,9 +10,9 @@ git clone git@github.com:sjaakluthart/mooc-website.git
 ```
 
 Requirements:
-*[Sass](http://sass-lang.com/)
-*[Bourbon](http://bourbon.io/)
-*[Compass](http://compass-style.org/)
+* [Sass](http://sass-lang.com/)
+* [Bourbon](http://bourbon.io/)
+* [Compass](http://compass-style.org/)
 
 After installing the listed requirements you can start developing! :)
 
