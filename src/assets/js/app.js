@@ -1,4 +1,12 @@
 $(document).ready(function(){
+
+    new Elevator({
+        element: document.querySelector('.back'),
+        mainAudio: 'assets/audio/elevator.mp3',
+        endAudio: 'assets/audio/ding.mp3',
+        duration: 5500
+    });
+
     // Init controller
     var controller = new ScrollMagic.Controller();
 
