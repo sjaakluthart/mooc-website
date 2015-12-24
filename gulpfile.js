@@ -3,7 +3,6 @@
 var gulp = require('gulp'),
     jscs = require('gulp-jscs'),
     jshint = require('gulp-jshint'),
-    sass = require('gulp-sass'),
     stylish = require('gulp-jscs-stylish'),
     scsslint = require('gulp-scss-lint'),
     sources;
