@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    // init controller
+    // Init controller
     var controller = new ScrollMagic.Controller();
 
     new ScrollMagic.Scene({
