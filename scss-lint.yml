@@ -106,7 +106,7 @@ linters:
     ignore_parent_selectors: false
 
   PlaceholderInExtend:
-    enabled: true
+    enabled: false
 
   PropertyCount:
     enabled: false
@@ -292,4 +292,4 @@ linters:
     enabled: true
 
   Compass::*:
-    enabled: true
+    enabled: false
