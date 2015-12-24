@@ -3,14 +3,31 @@ $(document).ready(function(){
     var controller = new ScrollMagic.Controller();
 
     new ScrollMagic.Scene({
-        triggerElement: '#pre-production'
+        triggerElement: '#pre-production1'
     })
         .setClassToggle('.fixed', 'active')
         .addIndicators({name: 'pre-production'}) // add indicators (requires plugin)
         .addTo(controller);
 
-    new ScrollMagic.Scene({triggerElement: "#pin1"})
-        .setClassToggle('#pin1', 'pinned')
-        .addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production1'
+    })
+        .setClassToggle('.pin-top', 'pinned')
+        .addIndicators({name: 'pre-production'}) // add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production2'
+    })
+        .setClassToggle('#pre-production2 ~ h2', 'pinned')
+        .addIndicators({name: 'pre-production'}) // add indicators (requires plugin)
+        .addTo(controller);
+
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production3'
+    })
+        .setClassToggle('.fade-in', 'active')
+        .addIndicators({name: 'pre-production'}) // add indicators (requires plugin)
         .addTo(controller);
 });
