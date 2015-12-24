@@ -14,9 +14,9 @@ article {
     @include calc(width, '40% - 4rem');
     padding: 2rem;
 
-    background: $white;
-
     border-radius: 1.5rem;
+
+    background: $white;
 
     strong {
         font-weight: $bold;
@@ -44,19 +44,20 @@ article {
 .page {
     > h1 {
         @include transition(top .5s ease-in-out);
-        margin-top: 5%;
 
         position: relative;
         top: 0;
 
+        margin-top: 5%;
+
         font-size: 4rem;
         font-weight: $round;
-        color: $red;
         text-align: center;
+        color: $red;
 
         &.pinned {
-            top: 5%;
             position: fixed;
+            top: 5%;
         }
     }
 
@@ -67,12 +68,12 @@ article {
         position: relative;
         top: 0;
 
+        opacity: 1;
+
         font-family: $filosofia;
         font-size: 3.5rem;
-        color: $white;
         text-align: center;
-
-        opacity: 1;
+        color: $white;
 
         &.pinned {
             @include calc(top, '5% + 4rem');
@@ -96,6 +97,7 @@ div {
 
         img {
             width: 35%;
+
             float: right;
         }
     }
