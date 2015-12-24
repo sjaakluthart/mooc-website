@@ -1,0 +1,17 @@
+@import "compass/reset";
+@import "fonts";
+@import "variables";
+
+html {
+	width: 100vw;
+	height: 100vh;
+	background: $color-background;
+}
+
+.logo {
+	width: 45%;
+
+	position: absolute;
+    top: 10%;
+    left: 10%;
+}
