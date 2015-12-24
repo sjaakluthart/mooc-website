@@ -23,4 +23,9 @@ To watch for Sass changes run:
 compass watch <path to assets>
 ```
 
-To enable development mode for scrollMagic add [this](http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js) plugin and use .addIndicators({name: '<name>'}) on your scenes.
+To enable development mode for scrollMagic add [this](http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js) plugin. 
+
+Use the following on your scenes to view triggers:
+```
+.addIndicators({name: '<name>'})
+```
