@@ -1,0 +1,111 @@
+@import 'bourbon/bourbon';
+@import 'variables';
+
+html {
+    background: $blue;
+
+    font-family: $gotham;
+    font-size: $font-size-base;
+    color: $black;
+}
+
+
+.page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+.back {
+    @include transition(left .3s ease-in-out, opacity 1s ease-in-out);
+    width: 10%;
+
+    position: fixed;
+    top: 2.5%;
+    left: -10%;
+
+    opacity: 0;
+
+    &.active {
+        left: 5%;
+
+        opacity: 1;
+    }
+}
+
+nav {
+    @include transition(right .5s ease-in-out, opacity 1s ease-in-out);
+    position: fixed;
+    right: -6rem;
+    bottom: 5rem;
+
+    opacity: 0;
+
+    &.active {
+        right: 1rem;
+        bottom: 5rem;
+
+        opacity: 1;
+    }
+
+    li {
+        width: 2.6rem;
+        height: 2.6rem;
+
+        margin: 2rem;
+
+        border: 2px solid $black;
+
+        list-style: none;
+
+        &:not(:nth-child(2)) {
+            border-radius: 2.5rem;
+        }
+
+        &:nth-child(2) {
+            @include transform(rotate(45deg));
+            background: $white;
+        }
+
+        &:nth-child(3) {
+            background: $yellow;
+        }
+
+        &:nth-child(4) {
+            background: $red;
+        }
+
+        &:nth-child(5) {
+            background: $green;
+        }
+    }
+}
+
+.clock {
+    @include transition(left .7s ease-in-out, opacity 1s ease-in-out);
+    width: 7%;
+
+    position: fixed;
+    left: -10%;
+    bottom: 2.5%;
+
+    opacity: 0;
+
+    &.active {
+        left: 5%;
+
+        opacity: 1;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    figcaption {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
