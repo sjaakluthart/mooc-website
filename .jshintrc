@@ -85,5 +85,8 @@
   "white"         : false,    // true: Check against strict whitespace and indentation rules
 
   "globals"       : {
+    "require"     : true,
+    "ScrollMagic" : true,
+    "$"           : true
   }
 }
