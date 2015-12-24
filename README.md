@@ -31,3 +31,27 @@ Use the following on your scenes to view triggers:
 ```
 .addIndicators({name: '<name>'})
 ```
+
+## Code Styling and Linting
+
+I've installed some node modules to help with my general code styling. I use gulp as a task manager.
+
+First install the node modules
+```
+npm install
+```
+
+To check scss code styling run:
+```
+make scss
+```
+
+To check js code styling run:
+```
+make jscs
+```
+
+To check js linting run:
+```
+make lint
+```
