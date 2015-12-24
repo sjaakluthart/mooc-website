@@ -2,3 +2,4 @@
 .sass-cache
 .idea
 stylesheets
+node_modules
