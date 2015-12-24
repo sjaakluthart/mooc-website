@@ -44,7 +44,7 @@ article {
     }
 }
 
-.trigger {
+.trigger.middle {
     position: absolute;
     top: 50%;
 }
@@ -152,6 +152,7 @@ nav {
 
 .pinned {
     @include transform(translateX(-50%));
+    @include calc(top, '5% + 4rem');
     position: fixed;
     top: 5%;
     left: 50%;

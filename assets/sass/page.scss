@@ -2,7 +2,7 @@
 @import 'variables';
 
 .logo {
-    @include animation(scaleUp .5s ease-in-out);
+    @include animation(scaleUp .7s ease-in-out);
     width: 45%;
 
     position: absolute;
@@ -25,41 +25,62 @@ article {
 
 .intro {
     article {
-        @include animation(scaleUp .7s ease-in-out);
+        @include animation(scaleUp 1s ease-in-out);
         position: absolute;
         top: 40%;
-        left: 45%;
+        left: 50%;
     }
 
     .scroll {
         @include animation(slideUp 1.5s ease-in-out);
-        width: 30%;
+        width: 25%;
 
         position: absolute;
         bottom: 10%;
-        left: 50%;
+        left: 57.5%;
     }
 }
 
 .page {
     > h1 {
+        @include transition(top .5s ease-in-out);
         margin-top: 5%;
+
+        position: relative;
+        top: 0;
 
         font-size: 4rem;
         font-weight: $round;
         color: $red;
         text-align: center;
+
+        &.pinned {
+            top: 5%;
+            position: fixed;
+        }
     }
 
     h2 {
+        @include transition(top .5s ease-in-out, opacity .5s ease-in-out);
         @include calc(margin-top, '5% + 4rem');
+
+        position: relative;
+        top: 0;
+
         font-family: $filosofia;
         font-size: 3.5rem;
         color: $white;
         text-align: center;
 
+        opacity: 1;
+
         &.pinned {
             @include calc(top, '5% + 4rem');
+            position: fixed;
+        }
+
+        &.hide {
+            opacity: 0;
         }
     }
 }

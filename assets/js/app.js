@@ -30,4 +30,18 @@ $(document).ready(function(){
         .setClassToggle('.fade-in', 'active')
         .addIndicators({name: 'pre-production'}) // add indicators (requires plugin)
         .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production4'
+    })
+        .setClassToggle('#pre-production2 ~ h2', 'hide')
+        .addIndicators({name: 'pre-production'}) // add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production5'
+    })
+        .setClassToggle('#pre-production5 ~ h2', 'pinned')
+        .addIndicators({name: 'pre-production'}) // add indicators (requires plugin)
+        .addTo(controller);
 });
