@@ -14,7 +14,7 @@
     "gulp-jscs": "^3.0.2",
     "gulp-jscs-stylish": "^1.2.1",
     "gulp-jshint": "^2.0.0",
-    "gulp-sass": "^2.1.1",
+    "gulp-ruby-sass": "^2.0.6",
     "gulp-scss-lint": "^0.3.8",
     "jscs": "^2.6.0",
     "jshint": "^2.8.0",

@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp'),
+    sass = require('gulp-ruby-sass'),
     jscs = require('gulp-jscs'),
     jshint = require('gulp-jshint'),
     stylish = require('gulp-jscs-stylish'),
@@ -43,4 +44,14 @@ gulp.task('lint', function() {
     return gulp.src(sources)
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'));
+});
+
+gulp.task('sass', function () {
+    return sass('src/assets/sass/**/*.scss', { style: 'compressed' })
+        .on('error', sass.logError)
+        .pipe(gulp.dest('src/assets/stylesheets'));
+});
+
+gulp.task('watch', function() {
+    gulp.watch('src/assets/sass/*.scss', ['sass']);
 });
