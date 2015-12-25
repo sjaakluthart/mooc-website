@@ -10,17 +10,16 @@ git clone git@github.com:sjaakluthart/mooc-website.git
 ```
 
 Requirements:
+* [Node.js](https://nodejs.org/en/)
+* [NPM](https://www.npmjs.com/)
 * [Sass](http://sass-lang.com/)
 * [Bourbon](http://bourbon.io/)
-* [Compass](http://compass-style.org/)
 
 After installing the listed requirements you can start developing! :)
 
-I use [Compass](http://compass-style.org/) to process my Sass, you can use any processor you like.
-
 To watch for Sass changes run:
 ```
-compass watch <path to assets>
+sass --watch src/assets/sass/style.scss:src/assets/stylesheets/style.css
 ```
 
 I use [scrollMagic](http://scrollmagic.io/) for handling scroll events.
@@ -34,7 +33,7 @@ Use the following on your scenes to view triggers:
 
 ## Code Styling and Linting
 
-I've installed some node modules to help with my general code styling. I use gulp as a task manager.
+I've installed some node modules to help with my code styling. I use gulp as a task manager.
 
 First install the node modules
 ```
