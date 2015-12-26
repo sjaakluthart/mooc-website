@@ -47,7 +47,7 @@ gulp.task('lint', function() {
 });
 
 gulp.task('sass', function () {
-    return sass('src/assets/sass/**/*.scss', { style: 'compressed' })
+    return sass('src/assets/sass/**/style.scss', { style: 'compressed' })
         .on('error', sass.logError)
         .pipe(gulp.dest('src/assets/stylesheets'));
 });
