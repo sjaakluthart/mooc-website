@@ -1,7 +1,7 @@
 {
   "name": "mooc-website",
   "version": "0.0.1",
-  "license": "CC-BY-NC-SA-1.0",
+  "license": "CC-BY-NC-SA-4.0",
   "repository": {
     "type": "git",
     "url": "git@github.com:sjaakluthart/mooc-website.git"
