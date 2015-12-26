@@ -10,22 +10,12 @@ var gulp = require('gulp'),
     gzip = require('gulp-gzip'),
     sources;
 
-gzip({ extension: 'zip' });
-
 sources = [
     'gulpfile.js',
     'src/**/*.js',
     '!node_modules/**/*.js',
     '!src/**/*.min.js'
 ];
-
-gulp.task('default', function() {
-    return gulp.src(sources)
-        .pipe(jshint())
-        .pipe(jscs())
-        .pipe(stylish.combineWithHintResults())
-        .pipe(jshint.reporter('jshint-stylish'));
-});
 
 gulp.task('jscs', function() {
     return gulp.src(sources)
@@ -52,8 +42,8 @@ gulp.task('lint', function() {
         .pipe(jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('sass', function () {
-    return sass('src/assets/sass/**/style.scss', { style: 'compressed' })
+gulp.task('sass', function() {
+    return sass('src/assets/sass/**/style.scss', {style: 'compressed'})
         .on('error', sass.logError)
         .pipe(gulp.dest('src/assets/stylesheets'));
 });
@@ -69,6 +59,6 @@ gulp.task('compress', ['sass'], function() {
         '!src/assets/sass/**/*'
     ])
         .pipe(tar('archive'))
-        .pipe(gzip({ extension: 'zip' }))
+        .pipe(gzip({extension: 'zip'}))
         .pipe(gulp.dest('build'));
 });
