@@ -6,6 +6,8 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     stylish = require('gulp-jscs-stylish'),
     scsslint = require('gulp-scss-lint'),
+    tar = require('gulp-tar'),
+    gzip = require('gulp-gzip'),
     sources;
 
 sources = [
@@ -56,4 +58,15 @@ gulp.task('sass', function () {
 
 gulp.task('watch', function() {
     gulp.watch('src/assets/sass/*.scss', ['sass']);
+});
+
+gulp.task('compress', ['sass'], function() {
+    gulp.src([
+        'src/**/*',
+        '!src/assets/sass/',
+        '!src/assets/sass/**/*'
+    ])
+        .pipe(tar('archive.tar'))
+        .pipe(gzip())
+        .pipe(gulp.dest('build'));
 });
