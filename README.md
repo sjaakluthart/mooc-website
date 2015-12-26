@@ -48,17 +48,17 @@ I've installed some node modules to help with my code styling.
 
 To check scss code styling run:
 ```
-make scss
+gulp scss
 ```
 
 To check js code styling run:
 ```
-make jscs
+gulp jscs
 ```
 
 To check js linting run:
 ```
-make lint
+gulp lint
 ```
 
 ## Generating Build
