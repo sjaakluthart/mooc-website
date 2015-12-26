@@ -32,7 +32,9 @@ gulp.task('jscs', function() {
 gulp.task('scss', function() {
     return gulp.src([
             'src/**/*.scss',
-            '!**/bourbon/**'
+            '!**/bourbon/**',
+            '!**/animatewithsass/**',
+            '!**/meyer-reset.scss'
         ])
         .pipe(scsslint({
             'config': 'scss-lint.yml',
