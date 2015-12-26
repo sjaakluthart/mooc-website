@@ -2,7 +2,7 @@
 @import 'variables';
 
 .logo {
-    @include animation(scaleUp .5s $ease-out-sine);
+    @include flipInX();
     width: 45%;
 
     position: absolute;
@@ -25,14 +25,14 @@ article {
 
 .intro {
     article {
-        @include animation(scaleUp .5s $ease-in-sine);
+        @include fadeInRightBig();
         position: absolute;
         top: 40%;
         left: 50%;
     }
 
     .scroll {
-        @include animation(slideUp 1s $ease-in-out-back);
+        @include bounceInUp($duration: 1s, $delay: 1s);
         width: 25%;
 
         position: absolute;
@@ -58,6 +58,8 @@ article {
         &.pinned {
             position: fixed;
             top: 5%;
+
+            margin-top: 0;
         }
     }
 
@@ -78,6 +80,8 @@ article {
         &.pinned {
             @include calc(top, '5% + 4rem');
             position: fixed;
+
+            margin-top: 1rem;
         }
 
         &.hide {
@@ -86,19 +90,66 @@ article {
     }
 }
 
-div {
-    &.center {
-        width: 70%;
+div.center {
+    width: 70%;
 
-        article {
-            @include calc(width, '50% - 4rem');
-            float: left;
+    article {
+        @include calc(width, '50% - 4rem');
+        float: left;
+    }
+
+    > img {
+        width: 35%;
+
+        float: right;
+    }
+}
+
+.faces {
+    width: 50%;
+
+    &.fixed {
+        position: fixed;
+    }
+
+    div {
+        width: 50%;
+    }
+
+    img {
+        @include transition(opacity .3s ease-in-out);
+        width: 50%;
+
+        float: left;
+
+        opacity: 0;
+
+        &.active {
+            opacity: 1;
         }
+    }
 
-        img {
-            width: 35%;
+    .face1 {
+        &.active {
+            @include tada();
+        }
+    }
 
-            float: right;
+    .face2 {
+        &.active {
+            @include bounce();
+        }
+    }
+
+    .face3 {
+        &.active {
+            @include rubberBand();
+        }
+    }
+
+    .face4 {
+        &.active {
+            @include jello();
         }
     }
 }

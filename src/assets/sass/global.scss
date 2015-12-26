@@ -152,6 +152,16 @@ nav {
     left: 50%;
 }
 
+.center-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin: auto;
+}
+
 .pinned {
     @include transform(translateX(-50%));
     @include calc(top, '5% + 4rem');
@@ -173,4 +183,8 @@ nav {
         @include transform(scale(1));
         opacity: 1;
     }
+}
+
+.pulse {
+    @include pulse();
 }

@@ -11,6 +11,13 @@ $(document).ready(function(){
     var controller = new ScrollMagic.Controller();
 
     new ScrollMagic.Scene({
+        triggerElement: '#pre-production'
+    })
+        .setClassToggle('#pre-production ~ img', 'pulse')
+        .addIndicators({name: 'pre-production'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
         triggerElement: '#pre-production1'
     })
         .setClassToggle('.fixed', 'active')
@@ -50,5 +57,47 @@ $(document).ready(function(){
     })
         .setClassToggle('#pre-production5 ~ h2', 'pinned')
         .addIndicators({name: 'pre-production5'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production5'
+    })
+        .setClassToggle('#pre-production5 ~ h2', 'pinned')
+        .addIndicators({name: 'pre-production5'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production6'
+    })
+        .setClassToggle('.face1', 'active')
+        .addIndicators({name: 'pre-production6'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production7'
+    })
+        .setClassToggle('.faces', 'fixed')
+        .addIndicators({name: 'pre-production7'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production8'
+    })
+        .setClassToggle('.face2', 'active')
+        .addIndicators({name: 'pre-production8'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production9'
+    })
+        .setClassToggle('.face3', 'active')
+        .addIndicators({name: 'pre-production9'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production10'
+    })
+        .setClassToggle('.face4', 'active')
+        .addIndicators({name: 'pre-production10'}) // Add indicators (requires plugin)
         .addTo(controller);
 });
