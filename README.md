@@ -12,7 +12,7 @@ git clone git@github.com:sjaakluthart/mooc-website.git
 Requirements:
 * [Node.js](https://nodejs.org/en/)
 * [NPM](https://www.npmjs.com/)
-* [gulp](http://gulpjs.com/)
+* [Gulp](http://gulpjs.com/)
 * [Sass](http://sass-lang.com/)
 * [Bourbon](http://bourbon.io/)
 
