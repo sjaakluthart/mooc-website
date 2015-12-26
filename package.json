@@ -20,6 +20,6 @@
     "jscs": "^2.6.0",
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.1.0",
-    "gulp-tar": "1.8.0"
+    "gulp-tar": "^1.8.0"
   }
 }
