@@ -81,23 +81,23 @@ $(document).ready(function(){
         .addTo(controller);
 
     new ScrollMagic.Scene({
-        triggerElement: '#pre-production8'
+        triggerElement: '#pre-production7'
     })
         .setClassToggle('.face2', 'active')
+        .addIndicators({name: 'pre-production7'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production8'
+    })
+        .setClassToggle('.face3', 'active')
         .addIndicators({name: 'pre-production8'}) // Add indicators (requires plugin)
         .addTo(controller);
 
     new ScrollMagic.Scene({
         triggerElement: '#pre-production9'
     })
-        .setClassToggle('.face3', 'active')
-        .addIndicators({name: 'pre-production9'}) // Add indicators (requires plugin)
-        .addTo(controller);
-
-    new ScrollMagic.Scene({
-        triggerElement: '#pre-production10'
-    })
         .setClassToggle('.face4', 'active')
-        .addIndicators({name: 'pre-production10'}) // Add indicators (requires plugin)
+        .addIndicators({name: 'pre-production9'}) // Add indicators (requires plugin)
         .addTo(controller);
 });
