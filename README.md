@@ -23,6 +23,11 @@ npm install
 
 After installing the listed requirements you can start developing! :)
 
+To compile Sass run:
+```
+gulp sass
+```
+
 To watch for Sass changes run:
 ```
 gulp watch
@@ -55,3 +60,11 @@ To check js linting run:
 ```
 make lint
 ```
+
+## Generating Build
+
+To compress the project folder run:
+```
+gulp compress
+```
+This will compile all Sass files and create an archive.gz file in the build directory.
