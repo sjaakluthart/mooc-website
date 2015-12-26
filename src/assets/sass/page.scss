@@ -1,6 +1,3 @@
-@import 'bourbon/bourbon';
-@import 'variables';
-
 .logo {
     @include flipInX();
     width: 45%;
@@ -110,8 +107,8 @@ div.center {
 
 .faces {
     @include transition(opacity .3s ease-in-out);
-
     width: 50%;
+
     position: relative;
 
     opacity: 1;
@@ -123,6 +120,7 @@ div.center {
     article {
         @include transition(opacity .3s ease-in-out);
         float: right;
+
         opacity: 0;
 
         &.active {
@@ -137,6 +135,7 @@ div.center {
 
     div {
         width: 50%;
+
         float: left;
     }
 

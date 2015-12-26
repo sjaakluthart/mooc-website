@@ -1,7 +1,3 @@
-@import 'bourbon/bourbon';
-@import 'variables';
-@import 'mixins';
-
 html {
     @include font-smoothing;
     background: $blue;

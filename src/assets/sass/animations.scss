@@ -1,5 +1,3 @@
-@import 'bourbon/bourbon';
-
 @include keyframes(scaleUp) {
     from {
         @include transform(scale(0));
