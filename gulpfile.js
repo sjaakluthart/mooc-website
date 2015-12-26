@@ -7,7 +7,6 @@ var gulp = require('gulp'),
     stylish = require('gulp-jscs-stylish'),
     scsslint = require('gulp-scss-lint'),
     tar = require('gulp-tar'),
-    gzip = require('gulp-gzip'),
     sources;
 
 sources = [
@@ -58,7 +57,6 @@ gulp.task('compress', ['sass'], function() {
         '!src/assets/sass/',
         '!src/assets/sass/**/*'
     ])
-        .pipe(tar('archive'))
-        .pipe(gzip({extension: 'zip'}))
+        .pipe(tar('archive.zip'))
         .pipe(gulp.dest('build'));
 });
