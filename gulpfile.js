@@ -10,6 +10,8 @@ var gulp = require('gulp'),
     gzip = require('gulp-gzip'),
     sources;
 
+gzip({ extension: 'zip' });
+
 sources = [
     'gulpfile.js',
     'src/**/*.js',
@@ -66,7 +68,7 @@ gulp.task('compress', ['sass'], function() {
         '!src/assets/sass/',
         '!src/assets/sass/**/*'
     ])
-        .pipe(tar('archive.tar'))
-        .pipe(gzip())
+        .pipe(tar('archive'))
+        .pipe(gzip({ extension: 'zip' }))
         .pipe(gulp.dest('build'));
 });
