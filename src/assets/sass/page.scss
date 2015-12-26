@@ -91,6 +91,9 @@ article {
 }
 
 div.center {
+    display: flex;
+    align-items: center;
+
     width: 70%;
 
     article {
@@ -101,12 +104,32 @@ div.center {
     > img {
         width: 35%;
 
-        float: right;
+        margin-left: 15%;
     }
 }
 
 .faces {
+    @include transition(opacity .3s ease-in-out);
+
     width: 50%;
+    position: relative;
+
+    opacity: 1;
+
+    &.hidden {
+        opacity: 0;
+    }
+
+    article {
+        @include transition(opacity .3s ease-in-out);
+        float: right;
+        opacity: 0;
+
+        &.active {
+            @include flipInY();
+            opacity: 1;
+        }
+    }
 
     &.fixed {
         position: fixed;
@@ -114,6 +137,7 @@ div.center {
 
     div {
         width: 50%;
+        float: left;
     }
 
     img {

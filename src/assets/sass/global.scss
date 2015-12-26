@@ -188,3 +188,11 @@ nav {
 .pulse {
     @include pulse();
 }
+
+.swing {
+    @include swing();
+}
+
+.rubber-band {
+    @include rubberBand();
+}

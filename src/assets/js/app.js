@@ -100,4 +100,32 @@ $(document).ready(function(){
         .setClassToggle('.face4', 'active')
         .addIndicators({name: 'pre-production9'}) // Add indicators (requires plugin)
         .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production10'
+    })
+        .setClassToggle('.faces article', 'active')
+        .addIndicators({name: 'pre-production10'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production11'
+    })
+        .setClassToggle('.faces', 'hidden')
+        .addIndicators({name: 'pre-production11'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production12'
+    })
+        .setClassToggle('#pre-production12 + div img', 'swing')
+        .addIndicators({name: 'pre-production12'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production13'
+    })
+        .setClassToggle('#pre-production13 + div img', 'rubber-band')
+        .addIndicators({name: 'pre-production12'}) // Add indicators (requires plugin)
+        .addTo(controller);
 });
