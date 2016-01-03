@@ -17,6 +17,10 @@ html {
         article {
             background: $yellow;
         }
+
+        .arrow {
+            top: 7rem;
+        }
     }
 }
 
@@ -135,6 +139,13 @@ nav {
             background: $green;
         }
     }
+}
+
+.arrow {
+    @include transition(top .5s ease-in-out);
+    position: absolute;
+    top: 2rem;
+    left: -2rem;
 }
 
 .clock {
