@@ -9,6 +9,7 @@
 
 article {
     @include calc(width, '40% - 4rem');
+    @include transition(background .3s ease-in-out);
     padding: 2rem;
 
     border-radius: 1.5rem;
@@ -40,7 +41,7 @@ article {
 
 .page {
     > h1 {
-        @include transition(top .5s ease-in-out);
+        @include transition(top .5s ease-in-out, opacity .5s ease-in-out, color .5s ease-in-out);
 
         position: relative;
         top: 0;
@@ -57,6 +58,10 @@ article {
             top: 5%;
 
             margin-top: 0;
+        }
+
+        &.hide {
+            opacity: 0;
         }
     }
 

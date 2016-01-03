@@ -1,10 +1,23 @@
 html {
     @include font-smoothing;
+    @include transition(background .3s ease-in-out);
     background: $blue;
 
     font-family: $gotham;
     font-size: $font-size-base;
     color: $black;
+
+    &.white {
+        background: $white;
+
+        .page > h1 {
+            color: $blue;
+        }
+
+        article {
+            background: $yellow;
+        }
+    }
 }
 
 a {

@@ -25,7 +25,7 @@ $(document).ready(function(){
     new ScrollMagic.Scene({
         triggerElement: '#pre-production1'
     })
-        .setClassToggle('.pin-top', 'pinned')
+        .setClassToggle('#pre-chapter', 'pinned')
         .addIndicators({name: 'pre-production1'}) // Add indicators (requires plugin)
         .addTo(controller);
 
@@ -195,5 +195,33 @@ $(document).ready(function(){
     })
         .setClassToggle('.paper', 'active')
         .addIndicators({name: 'pre-production21'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production22'
+    })
+        .setClassToggle('#pre-chapter', 'hide')
+        .addIndicators({name: 'pre-production22'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production22'
+    })
+        .setClassToggle('#submission', 'hide')
+        .addIndicators({name: 'pre-production22'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production22'
+    })
+        .setClassToggle('#test-chapter', 'pinned')
+        .addIndicators({name: 'pre-production22'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#test'
+    })
+        .setClassToggle('html', 'white')
+        .addIndicators({name: 'test'}) // Add indicators (requires plugin)
         .addTo(controller);
 });
