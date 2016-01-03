@@ -32,7 +32,7 @@ $(document).ready(function(){
     new ScrollMagic.Scene({
         triggerElement: '#pre-production2'
     })
-        .setClassToggle('#pre-production2 ~ h2', 'pinned')
+        .setClassToggle('#internal-proposal', 'pinned')
         .addIndicators({name: 'pre-production2'}) // Add indicators (requires plugin)
         .addTo(controller);
 
@@ -46,21 +46,14 @@ $(document).ready(function(){
     new ScrollMagic.Scene({
         triggerElement: '#pre-production4'
     })
-        .setClassToggle('#pre-production2 ~ h2', 'hide')
+        .setClassToggle('#internal-proposal', 'hide')
         .addIndicators({name: 'pre-production4'}) // Add indicators (requires plugin)
         .addTo(controller);
 
     new ScrollMagic.Scene({
         triggerElement: '#pre-production5'
     })
-        .setClassToggle('#pre-production5 ~ h2', 'pinned')
-        .addIndicators({name: 'pre-production5'}) // Add indicators (requires plugin)
-        .addTo(controller);
-
-    new ScrollMagic.Scene({
-        triggerElement: '#pre-production5'
-    })
-        .setClassToggle('#pre-production5 ~ h2', 'pinned')
+        .setClassToggle('#recruitment', 'pinned')
         .addIndicators({name: 'pre-production5'}) // Add indicators (requires plugin)
         .addTo(controller);
 
@@ -114,6 +107,20 @@ $(document).ready(function(){
         .addTo(controller);
 
     new ScrollMagic.Scene({
+        triggerElement: '#pre-production11'
+    })
+        .setClassToggle('#recruitment', 'hide')
+        .addIndicators({name: 'pre-production11'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production11-1'
+    })
+        .setClassToggle('#research', 'pinned')
+        .addIndicators({name: 'pre-production11.1'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
         triggerElement: '#pre-production12'
     })
         .setClassToggle('#pre-production12 + div img', 'swing')
@@ -124,6 +131,69 @@ $(document).ready(function(){
         triggerElement: '#pre-production13'
     })
         .setClassToggle('#pre-production13 + div img', 'rubber-band')
-        .addIndicators({name: 'pre-production12'}) // Add indicators (requires plugin)
+        .addIndicators({name: 'pre-production13'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production14'
+    })
+        .setClassToggle('.dart', 'active')
+        .addIndicators({name: 'pre-production14'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production15'
+    })
+        .setClassToggle('#research', 'hide')
+        .addIndicators({name: 'pre-production15'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production16'
+    })
+        .setClassToggle('#concept', 'pinned')
+        .addIndicators({name: 'pre-production16'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production17'
+    })
+        .setClassToggle('#pre-production17 + div img', 'tada')
+        .addIndicators({name: 'pre-production17'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production18'
+    })
+        .setClassToggle('#pre-production18 + div img', 'wobble')
+        .addIndicators({name: 'pre-production18'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production19'
+    })
+        .setClassToggle('#pencil', 'active')
+        .addIndicators({name: 'pre-production19'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production20'
+    })
+        .setClassToggle('#concept', 'hide')
+        .addIndicators({name: 'pre-production20'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production21'
+    })
+        .setClassToggle('#submission', 'pinned')
+        .addIndicators({name: 'pre-production21'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#pre-production21'
+    })
+        .setClassToggle('.paper', 'active')
+        .addIndicators({name: 'pre-production21'}) // Add indicators (requires plugin)
         .addTo(controller);
 });

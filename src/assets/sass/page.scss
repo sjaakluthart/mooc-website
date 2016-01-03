@@ -176,3 +176,73 @@ div.center {
         }
     }
 }
+
+.dart {
+    @include transition(all .5s ease-in-out);
+    @include transform(rotate(20deg));
+    position: absolute;
+    top: -25%;
+    right: -60%;
+
+    margin-left: 0;
+
+    &.active {
+        @include transform(rotate(-25deg));
+        top: 15%;
+        right: -16.5%;
+    }
+}
+
+#pencil {
+    width: 20%;
+
+    margin-left: 20%;
+
+    opacity: 0;
+
+    &.active {
+        @include bounceInRight();
+        opacity: 1;
+    }
+
+}
+
+.paper {
+    width: 30rem!important;
+
+    position: absolute;
+
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &.top {
+        top: -1.5rem;
+
+        z-index: 3;
+
+        &.active {
+            @include bounceInRight($delay: .4s, $duration: .5s);
+        }
+    }
+
+    &.middle {
+        z-index: 2;
+
+        &.active {
+            @include bounceInRight($delay: .2s, $duration: .5s);
+        }
+    }
+
+    &.bottom {
+        bottom: 0;
+
+        z-index: 1;
+
+        &.active {
+            @include bounceInRight($duration: .5s);
+        }
+    }
+}
