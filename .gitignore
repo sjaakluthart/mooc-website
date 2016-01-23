@@ -1,6 +1,5 @@
 .DS_STORE
 .sass-cache
-.idea
 stylesheets
 node_modules
 build
