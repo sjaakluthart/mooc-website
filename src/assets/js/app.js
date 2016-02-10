@@ -121,20 +121,6 @@ $(document).ready(function(){
         .addTo(controller);
 
     new ScrollMagic.Scene({
-        triggerElement: '#pre-production12'
-    })
-        .setClassToggle('#pre-production12 + div img', 'swing')
-        .addIndicators({name: 'pre-production12'}) // Add indicators (requires plugin)
-        .addTo(controller);
-
-    new ScrollMagic.Scene({
-        triggerElement: '#pre-production13'
-    })
-        .setClassToggle('#pre-production13 + div img', 'rubber-band')
-        .addIndicators({name: 'pre-production13'}) // Add indicators (requires plugin)
-        .addTo(controller);
-
-    new ScrollMagic.Scene({
         triggerElement: '#pre-production14'
     })
         .setClassToggle('.dart', 'active')
@@ -153,20 +139,6 @@ $(document).ready(function(){
     })
         .setClassToggle('#concept', 'pinned')
         .addIndicators({name: 'pre-production16'}) // Add indicators (requires plugin)
-        .addTo(controller);
-
-    new ScrollMagic.Scene({
-        triggerElement: '#pre-production17'
-    })
-        .setClassToggle('#pre-production17 + div img', 'tada')
-        .addIndicators({name: 'pre-production17'}) // Add indicators (requires plugin)
-        .addTo(controller);
-
-    new ScrollMagic.Scene({
-        triggerElement: '#pre-production18'
-    })
-        .setClassToggle('#pre-production18 + div img', 'wobble')
-        .addIndicators({name: 'pre-production18'}) // Add indicators (requires plugin)
         .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -223,5 +195,47 @@ $(document).ready(function(){
     })
         .setClassToggle('html', 'white')
         .addIndicators({name: 'test'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#production1'
+    })
+        .setClassToggle('html', 'yellow')
+        .addIndicators({name: 'test1'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#production1'
+    })
+        .setClassToggle('#production-chapter', 'pinned')
+        .addIndicators({name: 'production1'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#production1'
+    })
+        .setClassToggle('#test-chapter', 'hide')
+        .addIndicators({name: 'production1'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#production2'
+    })
+        .setClassToggle('#flipboard-top', 'active')
+        .addIndicators({name: 'production2'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#production3'
+    })
+        .setClassToggle('#course', 'pinned')
+        .addIndicators({name: 'production3'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#production4'
+    })
+        .setClassToggle('#production4 + div > img', 'swing')
+        .addIndicators({name: 'production4'}) // Add indicators (requires plugin)
         .addTo(controller);
 });

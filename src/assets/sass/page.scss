@@ -256,3 +256,26 @@ div.center {
     font-family: $filosofia;
     font-size: 8rem;
 }
+
+.flipboard {
+    width: 30%;
+    height: 37%;
+
+    img {
+        width: 100%;
+    }
+
+    #flipboard-top {
+        @include transform(rotate(-20deg));
+        @include transition(transform .3s ease);
+        position: relative;
+        top: 5%;
+        left: 0%;
+
+        transform-origin: bottom left;
+
+        &.active {
+            @include transform(rotate(0));
+        }
+    }
+}
