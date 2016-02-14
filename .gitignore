@@ -3,3 +3,5 @@
 stylesheets
 node_modules
 build
+bower_components
+scripts.js
