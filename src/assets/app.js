@@ -5,6 +5,8 @@ $(document).ready(function(){
         duration: 5500
     });
 
+    var height = $( window ).height();
+
     // Init controller
     var controller = new ScrollMagic.Controller();
 
@@ -238,4 +240,35 @@ $(document).ready(function(){
         .setClassToggle('#production4 + div > img', 'swing')
         .addIndicators({name: 'production4'}) // Add indicators (requires plugin)
         .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#production5',
+        duration: height
+    })
+        .setClassToggle('html', 'stop')
+        .addIndicators({name: 'production5'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#production6'
+    })
+        .setClassToggle('#course', 'hide')
+        .addIndicators({name: 'production6'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#production6'
+    })
+        .setClassToggle('#video', 'pinned')
+        .addIndicators({name: 'production6'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#production7',
+        duration: height
+    })
+        .setClassToggle('html', 'stop')
+        .addIndicators({name: 'production7'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
 });

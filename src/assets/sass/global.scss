@@ -38,6 +38,22 @@ html {
             height: 5rem;
         }
     }
+
+    &.stop {
+        background: $white;
+
+        .page > h1 {
+            color: $blue;
+        }
+
+        article {
+            background: $yellow;
+        }
+
+        nav div:nth-of-type(1) div {
+            height: 5rem;
+        }
+    }
 }
 
 a {
