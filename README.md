@@ -11,14 +11,23 @@ git clone git@github.com:sjaakluthart/mooc-website.git
 
 Requirements:
 * [Node.js](https://nodejs.org/en/)
-* [NPM](https://www.npmjs.com/)
+* [Bower](http://bower.io/)
 * [Gulp](http://gulpjs.com/)
 * [Sass](http://sass-lang.com/)
-* [Bourbon](http://bourbon.io/)
 
-Install the node modules
+Install the node modules:
 ```
 npm install
+```
+
+Install the bower components:
+```
+bower install
+```
+
+Generate the assets file *scripts.js*:
+```
+gulp scripts
 ```
 
 After installing the listed requirements you can start developing! :)
@@ -35,7 +44,7 @@ gulp watch
 
 I use [scrollMagic](http://scrollmagic.io/) for handling scroll events.
 
-To enable development mode for scrollMagic add [this](http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js) plugin. 
+To enable development mode for scrollMagic add [this](http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js) plugin.
 
 Use the following on your scenes to view triggers:
 ```
