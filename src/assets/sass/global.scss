@@ -334,7 +334,18 @@ nav {
     }
 
     img {
+        @include transition(opacity .5s ease-in-out);
         width: 100%;
+
+        opacity: 1;
+
+        &.hide {
+          opacity: 0;
+        }
+    }
+
+    #clock-red {
+      position: absolute;
     }
 
     figcaption {
