@@ -80,7 +80,7 @@ gulp.task('watch', function() {
     gulp.watch('src/assets/sass/*.scss', ['sass']);
 });
 
-gulp.task('compress', ['sass'], function() {
+gulp.task('compress', ['sass', 'scripts'], function() {
     gulp.src([
         'src/**/*',
         '!src/assets/sass/',
