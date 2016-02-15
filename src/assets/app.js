@@ -310,21 +310,28 @@ $(document).ready(function(){
         triggerElement: '#execution1'
     })
         .setClassToggle('#platform', 'pinned')
-        .addIndicators({name: 'execution'}) // Add indicators (requires plugin)
+        .addIndicators({name: 'execution1'}) // Add indicators (requires plugin)
         .addTo(controller);
 
     new ScrollMagic.Scene({
         triggerElement: '#execution2'
     })
         .setClassToggle('#launch', 'pinned')
-        .addIndicators({name: 'execution'}) // Add indicators (requires plugin)
+        .addIndicators({name: 'execution2'}) // Add indicators (requires plugin)
         .addTo(controller);
 
     new ScrollMagic.Scene({
         triggerElement: '#execution2'
     })
         .setClassToggle('#platform', 'hide')
-        .addIndicators({name: 'execution'}) // Add indicators (requires plugin)
+        .addIndicators({name: 'execution2'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#execution3'
+    })
+        .setClassToggle('#fireworks', 'active')
+        .addIndicators({name: 'execution3'}) // Add indicators (requires plugin)
         .addTo(controller);
 
 });

@@ -336,3 +336,12 @@ div.center {
     }
 
 }
+
+#fireworks {
+    @include transition(transform .5s ease-in-out);
+    @include transform(scale(0));
+
+    &.active {
+        @include transform(scale(1));
+    }
+}
