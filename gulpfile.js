@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     header = require('gulp-header'),
     sources,
-    scripts,
+    bowerComponents,
     bowerBanner;
 
 sources = [
@@ -23,7 +23,7 @@ sources = [
     '!src/**/*.min.js'
 ];
 
-scripts = [
+bowerComponents = [
     './bower_components/jquery/dist/jquery.min.js',
     './bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
     './bower_components/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
@@ -69,9 +69,9 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('src/assets/stylesheets'));
 });
 
-gulp.task('scripts', function() {
-  return gulp.src(scripts)
-  .pipe(concat('scripts.js'))
+gulp.task('bower', function() {
+  return gulp.src(bowerComponents)
+  .pipe(concat('bower_components.js'))
   .pipe(header(bowerBanner))
   .pipe(gulp.dest('./src/assets/'));
 });
@@ -80,7 +80,7 @@ gulp.task('watch', function() {
     gulp.watch('src/assets/sass/*.scss', ['sass']);
 });
 
-gulp.task('compress', ['sass', 'scripts'], function() {
+gulp.task('compress', ['sass', 'bower'], function() {
     gulp.src([
         'src/**/*',
         '!src/assets/sass/',
