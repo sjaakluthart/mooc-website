@@ -49,8 +49,20 @@ html {
         article {
             background: $yellow;
         }
+    }
 
-        nav div:nth-of-type(1) div {
+    &.red {
+        background: $red;
+
+        .page > h1 {
+            color: $yellow;
+        }
+
+        article {
+            background: $white;
+        }
+
+        nav div:nth-of-type(3) div {
             height: 5rem;
         }
     }

@@ -271,4 +271,38 @@ $(document).ready(function(){
         .addIndicators({name: 'production7'}) // Add indicators (requires plugin)
         .addTo(controller);
 
+    new ScrollMagic.Scene({
+        triggerElement: '#execution'
+    })
+        .setClassToggle('html', 'red')
+        .addIndicators({name: 'execution'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#execution'
+    })
+        .setClassToggle('#execution-chapter', 'pinned')
+        .addIndicators({name: 'execution'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#execution'
+    })
+        .setClassToggle('#production-chapter', 'hide')
+        .addIndicators({name: 'execution'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#execution'
+    })
+        .setClassToggle('#video', 'hide')
+        .addIndicators({name: 'execution'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#execution1'
+    })
+        .setClassToggle('#platform', 'pinned')
+        .addIndicators({name: 'execution'}) // Add indicators (requires plugin)
+        .addTo(controller);
 });
