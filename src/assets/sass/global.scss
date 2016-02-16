@@ -1,440 +1,440 @@
 html {
-    @include font-smoothing;
-    @include transition(background .3s ease-in-out);
-    background: $blue;
+  @include font-smoothing;
+  @include transition(background .3s ease-in-out);
+  background: $blue;
 
-    font-family: $gotham;
-    font-size: $font-size-base;
-    color: $black;
+  font-family: $gotham;
+  font-size: $font-size-base;
+  color: $black;
 
-    &.white {
-        background: $white;
+  &.white {
+    background: $white;
 
-        .page > h1 {
-            color: $blue;
-        }
-
-        article {
-            background: $yellow;
-        }
-
-        nav div:nth-of-type(1) div {
-            height: 5rem;
-        }
+    .page > h1 {
+      color: $blue;
     }
 
-    &.yellow {
-        background: $yellow;
-
-        .page > h1 {
-            color: $red;
-        }
-
-        article {
-            background: $white;
-        }
-
-        nav div:nth-of-type(2) div {
-            height: 5rem;
-        }
+    article {
+      background: $yellow;
     }
 
-    &.stop {
-        background: $white;
+    nav div:nth-of-type(1) div {
+      height: 5rem;
+    }
+  }
 
-        .page > h1 {
-            color: $blue;
-        }
+  &.yellow {
+    background: $yellow;
 
-        article {
-            background: $yellow;
-        }
+    .page > h1 {
+      color: $red;
     }
 
-    &.red {
-        background: $red;
-
-        .page > h1 {
-            color: $yellow;
-        }
-
-        article {
-            background: $white;
-        }
-
-        nav div:nth-of-type(3) div {
-            height: 5rem;
-        }
+    article {
+      background: $white;
     }
+
+    nav div:nth-of-type(2) div {
+      height: 5rem;
+    }
+  }
+
+  &.stop {
+    background: $white;
+
+    .page > h1 {
+      color: $blue;
+    }
+
+    article {
+      background: $yellow;
+    }
+  }
+
+  &.red {
+    background: $red;
+
+    .page > h1 {
+      color: $yellow;
+    }
+
+    article {
+      background: $white;
+    }
+
+    nav div:nth-of-type(3) div {
+      height: 5rem;
+    }
+  }
 }
 
 a {
-    color: $red;
+  color: $red;
 
-    font-weight: $bold;
+  font-weight: $bold;
 }
 
 .page {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 
-    position: relative;
+  position: relative;
 
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .intro {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 
-    position: relative;
+  position: relative;
 
-    overflow: hidden;
+  overflow: hidden;
 }
 
 article {
 
-    p {
-        font-size: 1.6rem;
-        line-height: 2.3rem;
-    }
+  p {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+  }
 
-    h1 {
-        @extend p;
-        font-weight: $bold;
-    }
+  h1 {
+    @extend p;
+    font-weight: $bold;
+  }
 
-    &.scale-up {
-        @include animation(scaleUp .5s ease-in-out);
-    }
+  &.scale-up {
+    @include animation(scaleUp .5s ease-in-out);
+  }
 }
 
 .trigger.middle {
-    position: absolute;
-    top: 50%;
+  position: absolute;
+  top: 50%;
 }
 
 .back {
-    @include transition(left .3s ease-in-out, opacity 1s ease-in-out);
-    width: 10%;
+  @include transition(left .3s ease-in-out, opacity 1s ease-in-out);
+  width: 10%;
 
-    position: fixed;
-    top: 2.5%;
-    left: -10%;
+  position: fixed;
+  top: 2.5%;
+  left: -10%;
 
-    opacity: 0;
+  opacity: 0;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    &.active {
-        left: 2%;
+  &.active {
+    left: 2%;
 
-        opacity: 1;
+    opacity: 1;
+  }
+
+  img {
+    @include transition(opacity 1s ease-in-out);
+    position: absolute;
+
+    opacity: 1;
+
+    &.hide {
+      opacity: 0;
     }
-
-    img {
-        @include transition(opacity 1s ease-in-out);
-        position: absolute;
-
-        opacity: 1;
-
-        &.hide {
-            opacity: 0;
-        }
-    }
+  }
 }
 
 nav {
-    @include transition(right .5s ease-in-out, opacity 1s ease-in-out);
-    position: fixed;
-    right: -6rem;
+  @include transition(right .5s ease-in-out, opacity 1s ease-in-out);
+  position: fixed;
+  right: -6rem;
+  bottom: 1rem;
+
+  opacity: 0;
+
+  &.active {
+    right: 1rem;
     bottom: 1rem;
+
+    opacity: 1;
+  }
+
+  li {
+    width: 2.2rem;
+    height: 2.2rem;
+
+    position: relative;
+
+    margin: 4rem 2rem;
+
+    border: 3px solid $black;
+
+    background: $blue;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    z-index: 1;
+
+    &:hover + p {
+      visibility: visible;
+
+      opacity: 1;
+    }
+
+    &:not(:nth-of-type(2)) {
+      border-radius: 2.5rem;
+    }
+
+    &:nth-of-type(2) {
+      @include transform(rotate(45deg));
+      background: $white;
+    }
+
+    &:nth-of-type(3) {
+      background: $yellow;
+    }
+
+    &:nth-of-type(4) {
+      background: $red;
+    }
+
+    &:nth-of-type(5) {
+      background: $green;
+    }
+  }
+
+  p {
+    @include transition(opacity .3s ease-in-out);
+    display: block;
+    visibility: hidden;
+
+    width: 10rem;
+
+    position: absolute;
+    top: 4.1rem;
+    left: -11.5rem;
+
+    padding: .7rem;
+
+    border: 1px solid $black;
+    border-radius: 3px;
+
+    background: $blue;
 
     opacity: 0;
 
-    &.active {
-        right: 1rem;
-        bottom: 1rem;
+    font-size: 1.3rem;
+    text-align: center;
 
-        opacity: 1;
+    &:nth-of-type(2) {
+      top: 10.8rem;
+
+      background: $white;
     }
 
-    li {
-        width: 2.2rem;
-        height: 2.2rem;
+    &:nth-of-type(3) {
+      top: 17.6rem;
 
-        position: relative;
-
-        margin: 4rem 2rem;
-
-        border: 3px solid $black;
-
-        background: $blue;
-
-        cursor: pointer;
-
-        list-style: none;
-
-        z-index: 1;
-
-        &:hover + p {
-            visibility: visible;
-
-            opacity: 1;
-        }
-
-        &:not(:nth-of-type(2)) {
-            border-radius: 2.5rem;
-        }
-
-        &:nth-of-type(2) {
-            @include transform(rotate(45deg));
-            background: $white;
-        }
-
-        &:nth-of-type(3) {
-            background: $yellow;
-        }
-
-        &:nth-of-type(4) {
-            background: $red;
-        }
-
-        &:nth-of-type(5) {
-            background: $green;
-        }
+      background: $yellow;
     }
 
-    p {
-        @include transition(opacity .3s ease-in-out);
-        display: block;
-        visibility: hidden;
+    &:nth-of-type(4) {
+      top: 24.3rem;
 
-        width: 10rem;
-
-        position: absolute;
-        top: 4.1rem;
-        left: -11.5rem;
-
-        padding: .7rem;
-
-        border: 1px solid $black;
-        border-radius: 3px;
-
-        background: $blue;
-
-        opacity: 0;
-
-        font-size: 1.3rem;
-        text-align: center;
-
-        &:nth-of-type(2) {
-            top: 10.8rem;
-
-            background: $white;
-        }
-
-        &:nth-of-type(3) {
-            top: 17.6rem;
-
-            background: $yellow;
-        }
-
-        &:nth-of-type(4) {
-            top: 24.3rem;
-
-            background: $red;
-        }
-
-        &:nth-of-type(5) {
-            top: 31.2rem;
-
-            background: $green;
-        }
+      background: $red;
     }
 
-    > div {
-        width: .6rem;
-        height: 5rem;
+    &:nth-of-type(5) {
+      top: 31.2rem;
 
-        position: absolute;
-        top: 6rem;
-        left: 2.9rem;
-
-        border: 2px solid $black;
-
-        background: $gray;
-
-        div {
-            @include transition(height .5s ease-in-out);
-            width: .6rem;
-            height: 0;
-
-            background: $blue;
-        }
-
-        &:nth-of-type(2) {
-            top: 13rem;
-
-            div {
-                background: $white;
-            }
-        }
-
-        &:nth-of-type(3) {
-            top: 20rem;
-
-            div {
-                background: $yellow;
-            }
-        }
-
-        &:nth-of-type(4) {
-            top: 27rem;
-
-            div {
-                background: $green;
-            }
-        }
+      background: $green;
     }
+  }
+
+  > div {
+    width: .6rem;
+    height: 5rem;
+
+    position: absolute;
+    top: 6rem;
+    left: 2.9rem;
+
+    border: 2px solid $black;
+
+    background: $gray;
+
+    div {
+      @include transition(height .5s ease-in-out);
+      width: .6rem;
+      height: 0;
+
+      background: $blue;
+    }
+
+    &:nth-of-type(2) {
+      top: 13rem;
+
+      div {
+        background: $white;
+      }
+    }
+
+    &:nth-of-type(3) {
+      top: 20rem;
+
+      div {
+        background: $yellow;
+      }
+    }
+
+    &:nth-of-type(4) {
+      top: 27rem;
+
+      div {
+        background: $green;
+      }
+    }
+  }
 }
 
 .clock {
-    @include transition(left .7s ease-in-out, opacity 1s ease-in-out);
-    width: 7%;
+  @include transition(left .7s ease-in-out, opacity 1s ease-in-out);
+  width: 7%;
 
-    position: fixed;
-    bottom: 2.5%;
-    left: -10%;
+  position: fixed;
+  bottom: 2.5%;
+  left: -10%;
 
-    opacity: 0;
+  opacity: 0;
 
-    &.active {
-        left: 2%;
+  &.active {
+    left: 2%;
 
-        opacity: 1;
+    opacity: 1;
+  }
+
+  div {
+    position: relative;
+  }
+
+  span {
+    @include transform(rotate(90deg));
+    @include transition(transform .5s ease);
+    display: block;
+
+    width: 40%;
+    height: .5rem;
+
+    position: absolute;
+    top: 50%;
+
+    margin-left: 10%;
+
+    background: $black;
+
+    border-radius: 10px;
+
+    transform-origin: center right;
+
+    &.hour {
+      @include transform(rotate(0deg));
+      width: 30%;
+
+      margin-left: 20%;
     }
+  }
 
-    div {
-        position: relative;
+  img {
+    @include transition(opacity .5s ease-in-out);
+    width: 100%;
+
+    opacity: 1;
+
+    &.hide {
+      opacity: 0;
     }
+  }
 
-    span {
-        @include transform(rotate(90deg));
-        @include transition(transform .5s ease);
-        display: block;
+  #clock-red {
+    position: absolute;
+  }
 
-        width: 40%;
-        height: .5rem;
+  figcaption {
+    margin-top: .5rem;
 
-        position: absolute;
-        top: 50%;
-
-        margin-left: 10%;
-
-        background: $black;
-
-        border-radius: 10px;
-
-        transform-origin: center right;
-
-        &.hour {
-            @include transform(rotate(0deg));
-            width: 30%;
-
-            margin-left: 20%;
-        }
-    }
-
-    img {
-        @include transition(opacity .5s ease-in-out);
-        width: 100%;
-
-        opacity: 1;
-
-        &.hide {
-          opacity: 0;
-        }
-    }
-
-    #clock-red {
-      position: absolute;
-    }
-
-    figcaption {
-        margin-top: .5rem;
-
-        font-size: 2rem;
-        text-align: center;
-        text-transform: uppercase;
-    }
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 
 .center {
-    @include transform(translate(-50%, -50%));
-    position: absolute;
-    top: 50%;
-    left: 50%;
+  @include transform(translate(-50%, -50%));
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-    &.left img {
-        margin-left: 0;
-        margin-right: 15%;
-    }
+  &.left img {
+    margin-left: 0;
+    margin-right: 15%;
+  }
 }
 
 .center-img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
-    margin: auto;
+  margin: auto;
 }
 
 .pinned {
-    @include transform(translateX(-50%));
-    @include calc(top, '5% + 4rem');
-    position: fixed;
-    top: 5%;
-    left: 50%;
+  @include transform(translateX(-50%));
+  @include calc(top, '5% + 4rem');
+  position: fixed;
+  top: 5%;
+  left: 50%;
 
-    margin-top: 0;
+  margin-top: 0;
 
-    z-index: 1;
+  z-index: 1;
 }
 
 .fade-in {
-    @include transition(transform .5s ease-in-out, opacity .8s ease-in-out);
-    @include transform(scale(0));
-    opacity: 0;
+  @include transition(transform .5s ease-in-out, opacity .8s ease-in-out);
+  @include transform(scale(0));
+  opacity: 0;
 
-    &.active {
-        @include transform(scale(1));
-        opacity: 1;
-    }
+  &.active {
+    @include transform(scale(1));
+    opacity: 1;
+  }
 }
 
 .pulse {
-    @include pulse();
+  @include pulse();
 }
 
 .swing {
-    @include swing();
+  @include swing();
 }
 
 .rubber-band {
-    @include rubberBand();
+  @include rubberBand();
 }
 
 .tada {
-    @include tada();
+  @include tada();
 }
 
 .wobble {
-    @include wobble();
+  @include wobble();
 }
 
 .shake {
-    @include shake();
+  @include shake();
 }

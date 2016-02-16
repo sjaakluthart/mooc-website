@@ -1,347 +1,347 @@
 .logo {
-    @include flipInX();
-    width: 45%;
+  @include flipInX();
+  width: 45%;
 
-    position: absolute;
-    top: 10%;
-    left: 10%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
 }
 
 article {
-    @include calc(width, '40% - 4rem');
-    @include transition(background .3s ease-in-out);
-    padding: 2rem;
+  @include calc(width, '40% - 4rem');
+  @include transition(background .3s ease-in-out);
+  padding: 2rem;
 
-    border-radius: 1.5rem;
+  border-radius: 1.5rem;
 
-    background: $white;
+  background: $white;
 
-    strong {
-        font-weight: $bold;
-    }
+  strong {
+    font-weight: $bold;
+  }
 }
 
 .intro {
-    article {
-        @include fadeInRightBig();
-        position: absolute;
-        top: 40%;
-        left: 50%;
-    }
+  article {
+    @include fadeInRightBig();
+    position: absolute;
+    top: 40%;
+    left: 50%;
+  }
 
-    .scroll {
-        @include bounceInUp($duration: 1s, $delay: 1s);
-        width: 25%;
+  .scroll {
+    @include bounceInUp($duration: 1s, $delay: 1s);
+    width: 25%;
 
-        position: absolute;
-        bottom: 10%;
-        left: 57.5%;
-    }
+    position: absolute;
+    bottom: 10%;
+    left: 57.5%;
+  }
 }
 
 .page {
-    > h1 {
-        @include transition(top .5s ease-in-out, opacity .5s ease-in-out, color .5s ease-in-out);
-
-        position: relative;
-        top: 0;
-
-        margin-top: 5%;
-
-        font-size: 4rem;
-        font-weight: $round;
-        text-align: center;
-        color: $red;
-
-        &.pinned {
-            position: fixed;
-            top: 5%;
-
-            margin-top: 0;
-        }
-
-        &.hide {
-            opacity: 0;
-        }
-    }
-
-    h2 {
-        @include transition(top .5s ease-in-out, opacity .5s ease-in-out);
-        @include calc(margin-top, '5% + 4rem');
-
-        position: relative;
-        top: 0;
-
-        opacity: 1;
-
-        font-family: $filosofia;
-        font-size: 3.5rem;
-        text-align: center;
-        color: $white;
-
-        &.pinned {
-            @include calc(top, '5% + 4rem');
-            position: fixed;
-
-            margin-top: 1rem;
-        }
-
-        &.hide {
-            opacity: 0;
-        }
-    }
-}
-
-div.center {
-    display: flex;
-    align-items: center;
-
-    width: 70%;
-
-    article {
-        @include calc(width, '50% - 4rem');
-        float: left;
-    }
-
-    > img {
-        width: 35%;
-
-        margin-left: 15%;
-    }
-}
-
-.faces {
-    @include transition(opacity .3s ease-in-out);
-    width: 50%;
+  > h1 {
+    @include transition(top .5s ease-in-out, opacity .5s ease-in-out, color .5s ease-in-out);
 
     position: relative;
+    top: 0;
+
+    margin-top: 5%;
+
+    font-size: 4rem;
+    font-weight: $round;
+    text-align: center;
+    color: $red;
+
+    &.pinned {
+      position: fixed;
+      top: 5%;
+
+      margin-top: 0;
+    }
+
+    &.hide {
+      opacity: 0;
+    }
+  }
+
+  h2 {
+    @include transition(top .5s ease-in-out, opacity .5s ease-in-out);
+    @include calc(margin-top, '5% + 4rem');
+
+    position: relative;
+    top: 0;
 
     opacity: 1;
 
-    &.hidden {
-        opacity: 0;
+    font-family: $filosofia;
+    font-size: 3.5rem;
+    text-align: center;
+    color: $white;
+
+    &.pinned {
+      @include calc(top, '5% + 4rem');
+      position: fixed;
+
+      margin-top: 1rem;
     }
 
-    article {
-        @include transition(opacity .3s ease-in-out);
-        float: right;
-
-        opacity: 0;
-
-        &.active {
-            @include flipInY();
-            opacity: 1;
-        }
+    &.hide {
+      opacity: 0;
     }
-
-    &.fixed {
-        position: fixed;
-    }
-
-    div {
-        width: 50%;
-
-        float: left;
-    }
-
-    img {
-        @include transition(opacity .3s ease-in-out);
-        width: 50%;
-
-        float: left;
-
-        opacity: 0;
-
-        &.active {
-            opacity: 1;
-        }
-    }
-
-    .face1 {
-        &.active {
-            @include tada();
-        }
-    }
-
-    .face2 {
-        &.active {
-            @include bounce();
-        }
-    }
-
-    .face3 {
-        &.active {
-            @include rubberBand();
-        }
-    }
-
-    .face4 {
-        &.active {
-            @include jello();
-        }
-    }
+  }
 }
 
-.dart {
-    @include transition(all .5s ease-in-out);
-    @include transform(rotate(20deg));
-    position: absolute;
-    top: -25%;
-    right: -60%;
+div.center {
+  display: flex;
+  align-items: center;
 
-    margin-left: 0;
+  width: 70%;
 
-    &.active {
-        @include transform(rotate(-25deg));
-        top: 15%;
-        right: -16.5%;
-    }
+  article {
+    @include calc(width, '50% - 4rem');
+    float: left;
+  }
+
+  > img {
+    width: 35%;
+
+    margin-left: 15%;
+  }
 }
 
-#pencil {
-    width: 20%;
+.faces {
+  @include transition(opacity .3s ease-in-out);
+  width: 50%;
 
-    margin-left: 20%;
+  position: relative;
+
+  opacity: 1;
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  article {
+    @include transition(opacity .3s ease-in-out);
+    float: right;
 
     opacity: 0;
 
     &.active {
-        @include bounceInRight();
-        opacity: 1;
+      @include flipInY();
+      opacity: 1;
     }
+  }
+
+  &.fixed {
+    position: fixed;
+  }
+
+  div {
+    width: 50%;
+
+    float: left;
+  }
+
+  img {
+    @include transition(opacity .3s ease-in-out);
+    width: 50%;
+
+    float: left;
+
+    opacity: 0;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .face1 {
+    &.active {
+      @include tada();
+    }
+  }
+
+  .face2 {
+    &.active {
+      @include bounce();
+    }
+  }
+
+  .face3 {
+    &.active {
+      @include rubberBand();
+    }
+  }
+
+  .face4 {
+    &.active {
+      @include jello();
+    }
+  }
+}
+
+.dart {
+  @include transition(all .5s ease-in-out);
+  @include transform(rotate(20deg));
+  position: absolute;
+  top: -25%;
+  right: -60%;
+
+  margin-left: 0;
+
+  &.active {
+    @include transform(rotate(-25deg));
+    top: 15%;
+    right: -16.5%;
+  }
+}
+
+#pencil {
+  width: 20%;
+
+  margin-left: 20%;
+
+  opacity: 0;
+
+  &.active {
+    @include bounceInRight();
+    opacity: 1;
+  }
 
 }
 
 .paper {
-    width: 30rem !important;
+  width: 30rem !important;
 
-    position: absolute;
+  position: absolute;
 
-    opacity: 0;
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+  }
+
+  &.top {
+    top: -1.5rem;
+
+    z-index: 3;
 
     &.active {
-        opacity: 1;
+      @include bounceInRight($delay: .4s, $duration: .5s);
     }
+  }
 
-    &.top {
-        top: -1.5rem;
+  &.middle {
+    z-index: 2;
 
-        z-index: 3;
-
-        &.active {
-            @include bounceInRight($delay: .4s, $duration: .5s);
-        }
+    &.active {
+      @include bounceInRight($delay: .2s, $duration: .5s);
     }
+  }
 
-    &.middle {
-        z-index: 2;
+  &.bottom {
+    bottom: 0;
 
-        &.active {
-            @include bounceInRight($delay: .2s, $duration: .5s);
-        }
+    z-index: 1;
+
+    &.active {
+      @include bounceInRight($duration: .5s);
     }
-
-    &.bottom {
-        bottom: 0;
-
-        z-index: 1;
-
-        &.active {
-            @include bounceInRight($duration: .5s);
-        }
-    }
+  }
 }
 
 .social {
-    font-family: $filosofia;
-    font-size: 8rem;
+  font-family: $filosofia;
+  font-size: 8rem;
 }
 
 .flipboard {
-    width: 30%;
-    height: 37%;
+  width: 30%;
+  height: 37%;
 
-    img {
-        width: 100%;
+  img {
+    width: 100%;
+  }
+
+  #flipboard-top {
+    @include transform(rotate(-20deg));
+    @include transition(transform .3s ease);
+    position: relative;
+    top: 5%;
+    left: 0%;
+
+    transform-origin: bottom left;
+
+    &.active {
+      @include transform(rotate(0));
     }
-
-    #flipboard-top {
-        @include transform(rotate(-20deg));
-        @include transition(transform .3s ease);
-        position: relative;
-        top: 5%;
-        left: 0%;
-
-        transform-origin: bottom left;
-
-        &.active {
-            @include transform(rotate(0));
-        }
-    }
+  }
 }
 
 .buttons {
-    width: 70%;
+  width: 70%;
 
-    h1 {
-        margin-bottom: 10%;
+  h1 {
+    margin-bottom: 10%;
 
-        font-size: 10rem;
-        font-weight: $round;
-        text-align: center;
-        text-transform: uppercase;
-        color: $red;
-    }
+    font-size: 10rem;
+    font-weight: $round;
+    text-align: center;
+    text-transform: uppercase;
+    color: $red;
+  }
 
-    img {
-        width: 30%;
+  img {
+    width: 30%;
 
-        margin: 0 10%;
+    margin: 0 10%;
 
-        float: left;
-    }
+    float: left;
+  }
 }
 
 .cogs {
-    width: 25%;
-    height: 43%;
+  width: 25%;
+  height: 43%;
 
-    img {
-        width: 55%;
+  img {
+    width: 55%;
 
-        position: absolute;
+    position: absolute;
 
-        margin: 0;
+    margin: 0;
 
-        &:nth-of-type(1) {
-            @include animation(spinning 3s linear infinite);
-            bottom: 0;
-        }
-
-        &:nth-of-type(2) {
-            @include animation(spinning 3s linear infinite reverse);
-            width: 40%;
-
-            top: 0;
-            left: 35%;
-        }
-
-        &:nth-of-type(3) {
-            @include animation(spinning 3s linear infinite);
-            width: 30%;
-
-            top: 35%;
-            left: 68%;
-        }
+    &:nth-of-type(1) {
+      @include animation(spinning 3s linear infinite);
+      bottom: 0;
     }
+
+    &:nth-of-type(2) {
+      @include animation(spinning 3s linear infinite reverse);
+      width: 40%;
+
+      top: 0;
+      left: 35%;
+    }
+
+    &:nth-of-type(3) {
+      @include animation(spinning 3s linear infinite);
+      width: 30%;
+
+      top: 35%;
+      left: 68%;
+    }
+  }
 
 }
 
 #fireworks {
-    @include transition(transform .5s ease-in-out);
-    @include transform(scale(0));
+  @include transition(transform .5s ease-in-out);
+  @include transform(scale(0));
 
-    &.active {
-        @include transform(scale(1));
-    }
+  &.active {
+    @include transform(scale(1));
+  }
 }
