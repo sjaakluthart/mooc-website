@@ -288,6 +288,13 @@ $(document).ready(function(){
     new ScrollMagic.Scene({
         triggerElement: '#execution'
     })
+        .setClassToggle('#back-red', 'hide')
+        .addIndicators({name: 'execution'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#execution'
+    })
         .setClassToggle('#clock-red', 'hide')
         .addIndicators({name: 'execution'}) // Add indicators (requires plugin)
         .addTo(controller);
@@ -332,6 +339,34 @@ $(document).ready(function(){
     })
         .setClassToggle('#fireworks', 'active')
         .addIndicators({name: 'execution3'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#execution4'
+    })
+        .setClassToggle('#maintenance', 'pinned')
+        .addIndicators({name: 'execution4'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#execution4'
+    })
+        .setClassToggle('#launch', 'hide')
+        .addIndicators({name: 'execution4'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#execution5'
+    })
+        .setClassToggle('#maintenance', 'hide')
+        .addIndicators({name: 'execution5'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#execution5'
+    })
+        .setClassToggle('#final', 'pinned')
+        .addIndicators({name: 'execution5'}) // Add indicators (requires plugin)
         .addTo(controller);
 
 });
