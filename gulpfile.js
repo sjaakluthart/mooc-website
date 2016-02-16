@@ -34,8 +34,9 @@ bowerComponents = [
 bowerBanner = ['/**',
   ' * Bower Components',
   ' * jQuery 2.2.0 - https://github.com/jquery/jquery',
-  ' * ScrollMagic.js - https://github.com/janpaepke/ScrollMagic',
+  ' * ScrollMagic.js 2.0.5 - https://github.com/janpaepke/ScrollMagic',
   ' * Elevator.js - https://github.com/tholman/elevator.js',
+  ' * jquery.scrollTo 2.1.2 - https://github.com/flesler/jquery.scrollTo',
   ' */',
   ''].join('\n');
 
