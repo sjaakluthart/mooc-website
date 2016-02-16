@@ -250,10 +250,10 @@ $(document).ready(function(){
         .addTo(controller);
 
     new ScrollMagic.Scene({
-        triggerElement: '#production6'
+        triggerElement: '#production5'
     })
         .setClassToggle('#course', 'hide')
-        .addIndicators({name: 'production6'}) // Add indicators (requires plugin)
+        .addIndicators({name: 'production5'}) // Add indicators (requires plugin)
         .addTo(controller);
 
     new ScrollMagic.Scene({
@@ -272,9 +272,23 @@ $(document).ready(function(){
         .addTo(controller);
 
     new ScrollMagic.Scene({
+        triggerElement: '#production7'
+    })
+        .setClassToggle('#video', 'hide')
+        .addIndicators({name: 'production7'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
         triggerElement: '#execution'
     })
         .setClassToggle('html', 'red')
+        .addIndicators({name: 'execution'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#execution'
+    })
+        .setClassToggle('#clock-red', 'hide')
         .addIndicators({name: 'execution'}) // Add indicators (requires plugin)
         .addTo(controller);
 
@@ -293,16 +307,31 @@ $(document).ready(function(){
         .addTo(controller);
 
     new ScrollMagic.Scene({
-        triggerElement: '#execution'
-    })
-        .setClassToggle('#video', 'hide')
-        .addIndicators({name: 'execution'}) // Add indicators (requires plugin)
-        .addTo(controller);
-
-    new ScrollMagic.Scene({
         triggerElement: '#execution1'
     })
         .setClassToggle('#platform', 'pinned')
-        .addIndicators({name: 'execution'}) // Add indicators (requires plugin)
+        .addIndicators({name: 'execution1'}) // Add indicators (requires plugin)
         .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#execution2'
+    })
+        .setClassToggle('#launch', 'pinned')
+        .addIndicators({name: 'execution2'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#execution2'
+    })
+        .setClassToggle('#platform', 'hide')
+        .addIndicators({name: 'execution2'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#execution3'
+    })
+        .setClassToggle('#fireworks', 'active')
+        .addIndicators({name: 'execution3'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
 });

@@ -304,7 +304,7 @@ div.center {
 
 .cogs {
     width: 25%;
-    height: 31%;
+    height: 43%;
 
     img {
         width: 55%;
@@ -335,4 +335,13 @@ div.center {
         }
     }
 
+}
+
+#fireworks {
+    @include transition(transform .5s ease-in-out);
+    @include transform(scale(0));
+
+    &.active {
+        @include transform(scale(1));
+    }
 }
