@@ -356,6 +356,13 @@ $(document).ready(function(){
         .addTo(controller);
 
     new ScrollMagic.Scene({
+        triggerElement: '#execution7'
+    })
+        .setClassToggle('#execution7 ~ div > img', 'shake')
+        .addIndicators({name: 'execution7'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
         triggerElement: '#execution5'
     })
         .setClassToggle('#maintenance', 'hide')
@@ -367,6 +374,13 @@ $(document).ready(function(){
     })
         .setClassToggle('#final', 'pinned')
         .addIndicators({name: 'execution5'}) // Add indicators (requires plugin)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '#execution6'
+    })
+        .setClassToggle('#execution6 ~ div > img', 'pulse')
+        .addIndicators({name: 'execution6'}) // Add indicators (requires plugin)
         .addTo(controller);
 
 });

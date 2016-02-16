@@ -434,3 +434,7 @@ nav {
 .wobble {
     @include wobble();
 }
+
+.shake {
+    @include shake();
+}
