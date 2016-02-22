@@ -378,4 +378,46 @@ $(document).ready(function(){
   .addIndicators({name: 'execution6'}) // Add indicators (requires plugin)
   .addTo(controller);
 
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation'
+  })
+  .setClassToggle('#evaluation-chapter', 'pinned')
+  .addIndicators({name: 'evaluation'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation'
+  })
+  .setClassToggle('#execution-chapter', 'hide')
+  .addIndicators({name: 'evaluation'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation'
+  })
+  .setClassToggle('#final', 'hide')
+  .addIndicators({name: 'evaluation'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation'
+  })
+  .setClassToggle('html', 'green')
+  .addIndicators({name: 'evaluation'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation'
+  })
+  .setClassToggle('#back-yellow', 'hide')
+  .addIndicators({name: 'evaluation'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation1'
+  })
+  .setClassToggle('.pages', 'active')
+  .addIndicators({name: 'evaluation1'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
 });

@@ -345,3 +345,43 @@ div.center {
     @include transform(scale(1));
   }
 }
+
+
+.pages {
+  @include transform(translate(-50%, -50%));
+  width: 30%;
+  height: 33%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  &.active {
+    img {
+      @include bounceInLeft($delay: .4s, $duration: .7s);
+
+      &:nth-of-type(2) {
+        @include bounceInLeft($delay: .2s, $duration: .7s);
+      }
+
+      &:nth-of-type(1) {
+        @include bounceInLeft($duration: .7s);
+      }
+    }
+  }
+
+  img {
+    @include calc(width, '(100% / 3) * 2');
+    position: absolute;
+
+    &:nth-of-type(2) {
+      top: -8%;
+      left: 8%;
+    }
+
+    &:nth-of-type(1) {
+      top: -16%;
+      left: 16%;
+    }
+  }
+}
