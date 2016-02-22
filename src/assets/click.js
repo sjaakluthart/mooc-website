@@ -22,7 +22,7 @@ $(document).ready(function(){
   });
 
   $('nav li:nth-of-type(5)').click(function(event) {
-    console.log('click5');
+    $(window).scrollTo('#evaluation', 1000);
   });
 
 });
