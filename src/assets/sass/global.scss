@@ -21,6 +21,10 @@ html {
     nav div:nth-of-type(1) div {
       height: 5rem;
     }
+
+    .overview {
+      color: $yellow;
+    }
   }
 
   &.yellow {
@@ -37,6 +41,10 @@ html {
     nav div:nth-of-type(2) div {
       height: 5rem;
     }
+
+    .overview {
+      color: $white;
+    }
   }
 
   &.stop {
@@ -48,6 +56,10 @@ html {
 
     article {
       background: $yellow;
+    }
+
+    .overview {
+      color: $yellow;
     }
   }
 
@@ -144,8 +156,27 @@ article {
   }
 }
 
+.overview {
+  @include transition(right .45s ease-in-out, opacity 1s ease-in-out, color .5s ease-in-out);
+  position: fixed;
+  top: 2.5%;
+  right: -10%;
+
+  opacity: 0;
+
+  font-size: 2.5rem;
+  font-weight: $round;
+  color: $white;
+
+  &.active {
+    right: 2%;
+
+    opacity: 1;
+  }
+}
+
 nav {
-  @include transition(right .5s ease-in-out, opacity 1s ease-in-out);
+  @include transition(right .6s ease-in-out, opacity 1s ease-in-out);
   position: fixed;
   right: -6rem;
   bottom: 1rem;
@@ -300,7 +331,7 @@ nav {
 }
 
 .clock {
-  @include transition(left .7s ease-in-out, opacity 1s ease-in-out);
+  @include transition(left .75s ease-in-out, opacity 1s ease-in-out);
   width: 7%;
 
   position: fixed;
