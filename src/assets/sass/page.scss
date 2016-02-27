@@ -358,14 +358,15 @@ div.center {
 
   &.active {
     img {
-      @include bounceInLeft($delay: .4s, $duration: .7s);
+      @include bounceInLeft($delay: .9s, $duration: .5s);
+      opacity: 1;
 
       &:nth-of-type(2) {
-        @include bounceInLeft($delay: .2s, $duration: .7s);
+        @include bounceInLeft($delay: .45s, $duration: .5s);
       }
 
       &:nth-of-type(1) {
-        @include bounceInLeft($duration: .7s);
+        @include bounceInLeft($duration: .5s);
       }
     }
   }
@@ -373,6 +374,8 @@ div.center {
   img {
     @include calc(width, '(100% / 3) * 2');
     position: absolute;
+
+    opacity: 0;
 
     &:nth-of-type(2) {
       top: -8%;
