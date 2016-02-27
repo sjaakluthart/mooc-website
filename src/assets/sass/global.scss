@@ -48,6 +48,10 @@ html {
 
     .overview {
       color: $white;
+
+      &:hover {
+        color: $yellow;
+      }
     }
   }
 
