@@ -24,6 +24,10 @@ html {
 
     .overview {
       color: $yellow;
+
+      &:hover {
+        color: $red;
+      }
     }
   }
 
@@ -175,6 +179,12 @@ article {
   font-size: 2.5rem;
   font-weight: $round;
   color: $white;
+
+  cursor: pointer;
+
+  &:hover {
+    color: $red;
+  }
 
   &.active {
     right: 2%;
@@ -441,6 +451,42 @@ nav {
   margin-top: 0;
 
   z-index: 1;
+}
+
+#overview {
+  @include transition(opacity .3s ease-in-out);
+  opacity: 0;
+
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+
+    pointer-events: all;
+  }
+
+  width: auto;
+  height: 90vh;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  margin: auto;
+
+  background: $white;
+
+  border: 1px solid $black;
+
+  box-shadow: 3px 3px 5px 0px transparentize($black, .55);
+
+  z-index: 2;
+}
+
+.overview-item {
+  cursor: pointer;
 }
 
 .fade-in {
