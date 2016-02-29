@@ -116,10 +116,16 @@ html {
   }
 }
 
-a {
+a,
+.click {
   color: $red;
 
   font-weight: $bold;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  pointer-events: all;
 }
 
 .page {
@@ -129,6 +135,8 @@ a {
   position: relative;
 
   overflow: hidden;
+
+  pointer-events: none;
 }
 
 .intro {
@@ -546,4 +554,46 @@ nav {
 
 .shake {
   @include shake();
+}
+
+.extra-media {
+  @include transition(opacity .5s ease-in-out);
+  display: flex;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+
+  background: transparentize($white, .05);
+
+  text-align: center;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  cursor: pointer;
+
+  z-index: 2;
+
+  &.active {
+    opacity: 1;
+
+    pointer-events: all;
+  }
+
+  img {
+    width: 45%;
+    height: auto;
+    max-height: 90%;
+
+    margin: auto;
+  }
+
+  iframe {
+    margin: auto;
+  }
 }

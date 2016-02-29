@@ -54,4 +54,13 @@ $(document).ready(function(){
     $(window).scrollTo('#evaluation', 1000);
   });
 
+  $('.click').click(function(event) {
+    var extraMedia = '#' + $(this).attr('data-name');
+    $(extraMedia).addClass('active');
+  });
+
+  $('.extra-media').click(function(event) {
+    $(this).removeClass('active');
+  })
+
 });
