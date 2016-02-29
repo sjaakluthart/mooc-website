@@ -586,9 +586,9 @@ nav {
   }
 
   img {
-    width: 45%;
-    height: auto;
+    max-width: 45%;
     max-height: 90%;
+    width: auto !important;
 
     margin: auto;
   }
