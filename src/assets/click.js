@@ -59,8 +59,52 @@ $(document).ready(function(){
     $(extraMedia).addClass('active');
   });
 
-  $('.extra-media').click(function(event) {
-    $(this).removeClass('active');
-  })
+  $('.close').click(function(event) {
+    $('.extra-media').removeClass('active');
+  });
+
+  $('#extra-media1 .arrow-next').click(function(event) {
+    $('#extra-media1').addClass('step1');
+  });
+
+  $('#extra-media1 .arrow-back').click(function(event) {
+    $('#extra-media1').removeClass('step1');
+  });
+
+  $('#extra-media5 .arrow-next').click(function(event) {
+    $('#extra-media5').addClass('step1');
+  });
+
+  $('#extra-media5 .arrow-back').click(function(event) {
+    $('#extra-media5').removeClass('step1');
+  });
+
+  $('#extra-media6 .arrow-next').click(function(event) {
+    $('#extra-media6').addClass('step1');
+  });
+
+  $('#extra-media6 .arrow-back').click(function(event) {
+    $('#extra-media6').removeClass('step1');
+  });
+
+  $('#extra-media7 .arrow-next').click(function(event) {
+
+    if ($('#extra-media7').hasClass('step1')) {
+        $('#extra-media7').addClass('step2');
+    } else {
+      $('#extra-media7').addClass('step1');
+    }
+
+  });
+
+  $('#extra-media7 .arrow-back').click(function(event) {
+
+    if ($('#extra-media7').hasClass('step2')) {
+        $('#extra-media7').removeClass('step2');
+    } else {
+      $('#extra-media7').removeClass('step1');
+    }
+    
+  });
 
 });

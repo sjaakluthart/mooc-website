@@ -585,6 +585,8 @@ nav {
     @include calc(height, '100% - 10vw');
     width: 90vw;
 
+    position: relative;
+
     padding: 5vw;
 
     float: left;
@@ -597,8 +599,52 @@ nav {
   iframe {
     margin: auto;
   }
+
+  .close {
+    width: 2vw;
+    height: 2vw;
+
+    position: fixed;
+    top: 1vw;
+    right: 1vw;
+
+    z-index: 2;
+  }
+
+  .arrow-back {
+    width: 5vw;
+
+    position: absolute;
+    top: 0;
+    left: 2vw;
+  }
+
+  .arrow-next {
+    @extend .arrow-back;
+    left: initial;
+    right: 2vw;
+  }
+
 }
 
-#extra-media1 {
+#extra-media1,
+#extra-media5,
+#extra-media6 {
   width: 200vw;
+
+  &.step1 {
+    @include transform(translateX(-100vw));
+  }
+}
+
+#extra-media7 {
+  width: 300vw;
+
+  &.step1 {
+    @include transform(translateX(-100vw));
+  }
+
+  &.step2 {
+    @include transform(translateX(-200vw));
+  }
 }
