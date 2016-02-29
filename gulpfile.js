@@ -26,7 +26,6 @@ sources = [
 bowerComponents = [
     './bower_components/jquery/dist/jquery.min.js',
     './bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
-    './bower_components/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
     './bower_components/elevator.js/elevator.min.js',
     './bower_components/jquery.scrollTo/jquery.scrollTo.min.js'
 ];
