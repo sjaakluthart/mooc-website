@@ -420,4 +420,74 @@ $(document).ready(function(){
   .addIndicators({name: 'evaluation1'}) // Add indicators (requires plugin)
   .addTo(controller);
 
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation2'
+  })
+  .setClassToggle('#feedback', 'pinned')
+  .addIndicators({name: 'evaluation1'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation3'
+  })
+  .setClassToggle('#feedback', 'hide')
+  .addIndicators({name: 'evaluation1'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation3'
+  })
+  .setClassToggle('#evaluation-chapter', 'hide')
+  .addIndicators({name: 'evaluation1'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation3'
+  })
+  .setClassToggle('#omt', 'pinned')
+  .addIndicators({name: 'evaluation3'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation3'
+  })
+  .setClassToggle('#free-tips', 'pinned')
+  .addIndicators({name: 'evaluation3'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation3'
+  })
+  .setClassToggle('html', 'omt')
+  .addIndicators({name: 'evaluation3'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation3'
+  })
+  .setClassToggle('#tips1', 'active')
+  .addIndicators({name: 'evaluation3'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation4'
+  })
+  .setClassToggle('#tips2', 'active')
+  .addIndicators({name: 'evaluation4'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation5'
+  })
+  .setClassToggle('#tips3', 'active')
+  .addIndicators({name: 'evaluation5'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#evaluation6'
+  })
+  .setClassToggle('#tips4', 'active')
+  .addIndicators({name: 'evaluation5'}) // Add indicators (requires plugin)
+  .addTo(controller);
+
 });

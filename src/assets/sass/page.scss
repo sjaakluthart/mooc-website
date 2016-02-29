@@ -388,3 +388,23 @@ div.center {
     }
   }
 }
+
+.small {
+  @include transition(opacity .5s ease-in-out);
+  width: 20% !important;
+  margin-left: 20%;
+
+  &:nth-child(1) {
+    margin-right: 20%;
+    margin-left: 0;
+  }
+}
+
+.tips article {
+  @include transition(opacity .5s ease-in-out);
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+  }
+}

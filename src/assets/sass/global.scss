@@ -94,6 +94,26 @@ html {
       height: 5rem;
     }
   }
+
+  &.omt {
+    background: $white;
+
+    .page > h1 {
+      color: $blue;
+    }
+
+    .page > h2 {
+      color: $yellow;
+    }
+
+    article {
+      background: $yellow;
+    }
+
+    .overview {
+      color: $yellow;
+    }
+  }
 }
 
 a {
