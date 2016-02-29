@@ -557,11 +557,7 @@ nav {
 }
 
 .extra-media {
-  @include transition(opacity .5s ease-in-out);
-  display: flex;
-  align-items: center;
-
-  width: 100vw;
+  @include transition(opacity .5s ease-in-out, transform .5s ease-in-out);
   height: 100vh;
 
   position: fixed;
@@ -585,15 +581,24 @@ nav {
     pointer-events: all;
   }
 
-  img {
-    max-width: 45%;
-    max-height: 90%;
-    width: auto !important;
+  div {
+    @include calc(height, '100% - 10vw');
+    width: 90vw;
 
-    margin: auto;
+    padding: 5vw;
+
+    float: left;
+  }
+
+  img {
+    height: 100%;
   }
 
   iframe {
     margin: auto;
   }
+}
+
+#extra-media1 {
+  width: 200vw;
 }
