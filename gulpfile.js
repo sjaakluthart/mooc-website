@@ -11,7 +11,9 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     header = require('gulp-header'),
+    pkg = require('./package.json'),
     sources,
+    banner,
     bowerComponents,
     bowerBanner;
 
@@ -36,6 +38,16 @@ bowerBanner = ['/**',
   ' * ScrollMagic.js 2.0.5 - https://github.com/janpaepke/ScrollMagic',
   ' * Elevator.js - https://github.com/tholman/elevator.js',
   ' * jquery.scrollTo 2.1.2 - https://github.com/flesler/jquery.scrollTo',
+  ' */',
+  ''].join('\n');
+
+banner = ['/**',
+  ' * <%= pkg.name %> - <%= pkg.description %>',
+  ' * @version v<%= pkg.version %>',
+  ' * @link <%= pkg.homepage %>',
+  ' * @author <%= pkg.author %>',
+  ' * @git <%= pkg.repository.url %>',
+  ' * @license <%= pkg.license %>',
   ' */',
   ''].join('\n');
 
@@ -77,15 +89,27 @@ gulp.task('bower', function() {
   .pipe(gulp.dest('./src/assets/'));
 });
 
-gulp.task('watch', function() {
-    gulp.watch('src/assets/sass/*.scss', ['sass']);
+gulp.task('build', function() {
+  return gulp.src('./src/assets/js/**.js')
+  .pipe(concat('app.js'))
+  .pipe(uglify())
+  .pipe(rename('app.min.js'))
+  .pipe(header(banner, {pkg : pkg}))
+  .pipe(gulp.dest('./src/assets'));
 });
 
-gulp.task('compress', ['sass', 'bower'], function() {
+gulp.task('watch', function() {
+    gulp.watch('src/assets/sass/*.scss', ['sass']);
+    gulp.watch('src/assets/js/*.js', ['build']);
+});
+
+gulp.task('compress', ['sass', 'bower', 'build'], function() {
     gulp.src([
         'src/**/*',
         '!src/assets/sass/',
-        '!src/assets/sass/**/*'
+        '!src/assets/sass/**/*',
+        '!src/assets/js/',
+        '!src/assets/js/**/*'
     ])
         .pipe(tar('archive.zip'))
         .pipe(gulp.dest('build'));

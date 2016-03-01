@@ -5,3 +5,4 @@ node_modules
 build
 bower_components
 bower_components.js
+app.min.js

@@ -1,7 +1,9 @@
 {
   "name": "mooc-website",
-  "version": "0.0.1",
+  "description": "website describing the process of making a MOOC",
+  "version": "0.9.0",
   "license": "CC-BY-NC-SA-4.0",
+  "author": "Sjaak Luthart <https://github.com/sjaakluthart/>",
   "repository": {
     "type": "git",
     "url": "git@github.com:sjaakluthart/mooc-website.git"
@@ -22,7 +24,7 @@
     "gulp-ruby-sass": "^2.0.6",
     "gulp-scss-lint": "^0.3.8",
     "gulp-tar": "^1.8.0",
-    "gulp-uglify": "^1.5.2",
+    "gulp-uglify": "^1.5.3",
     "jscs": "^2.6.0",
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.1.0"
