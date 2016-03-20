@@ -36,6 +36,25 @@ article {
     position: absolute;
     bottom: 10%;
     left: 57.5%;
+
+    span {
+      display: block;
+
+      font-size: 4rem;
+      font-weight: $round;
+      text-align: center;
+      color: $yellow;
+    }
+
+    img {
+      @include animation(bouncing 1.5s infinite ease-in-out);
+      @include animation-delay(1.5s);
+      width: 10%;
+
+      position: absolute;
+      left: 45%;
+      top: 5rem;
+    }
   }
 }
 
@@ -117,7 +136,7 @@ div.center {
   position: relative;
 
   opacity: 1;
-  
+
   &.hidden {
     opacity: 0;
   }

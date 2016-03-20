@@ -190,6 +190,8 @@ article {
 
   img {
     @include transition(opacity 1s ease-in-out);
+    width: 100%;
+    
     position: absolute;
 
     opacity: 1;
