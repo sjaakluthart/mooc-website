@@ -191,7 +191,7 @@ article {
   img {
     @include transition(opacity 1s ease-in-out);
     width: 100%;
-    
+
     position: absolute;
 
     opacity: 1;
@@ -483,7 +483,9 @@ nav {
   left: 50%;
 
   margin-top: 0;
+}
 
+h1.pinned {
   z-index: 1;
 }
 
@@ -614,7 +616,7 @@ nav {
   }
 
   .arrow-back {
-    width: 5vw;
+    width: 2vw;
 
     position: absolute;
     top: 0;
@@ -624,7 +626,7 @@ nav {
   .arrow-next {
     @extend .arrow-back;
     left: initial;
-    right: 2vw;
+    right: 3vw;
   }
 
 }
@@ -649,4 +651,10 @@ nav {
   &.step2 {
     @include transform(translateX(-200vw));
   }
+}
+
+.yes,
+.yes1,
+.no {
+  pointer-events: all;
 }

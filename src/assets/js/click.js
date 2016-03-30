@@ -54,6 +54,18 @@ $(document).ready(function(){
     $(window).scrollTo('#evaluation', 1000);
   });
 
+  $('.yes').click(function(event) {
+    $(window).scrollTo('#production6', 1000);
+  });
+
+  $('.no').click(function(event) {
+    $(window).scrollTo('#getting-feedback', 1000);
+  });
+
+  $('.yes1').click(function(event) {
+    $(window).scrollTo('#execution', 1000);
+  });
+
   $('.click').click(function(event) {
     var extraMedia = '#' + $(this).attr('data-name');
     $(extraMedia).addClass('active');
@@ -104,7 +116,7 @@ $(document).ready(function(){
     } else {
       $('#extra-media7').removeClass('step1');
     }
-    
+
   });
 
 });
