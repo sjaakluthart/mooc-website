@@ -83,6 +83,14 @@ $(document).ready(function(){
     $('#extra-media1').removeClass('step1');
   });
 
+  $('#extra-media3 .arrow-next').click(function(event) {
+    $('#extra-media3').addClass('step1');
+  });
+
+  $('#extra-media3 .arrow-back').click(function(event) {
+    $('#extra-media3').removeClass('step1');
+  });
+
   $('#extra-media5 .arrow-next').click(function(event) {
     $('#extra-media5').addClass('step1');
   });
