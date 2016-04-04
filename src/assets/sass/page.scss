@@ -85,7 +85,7 @@ article {
   }
 
   h2 {
-    @include transition(top .5s ease-in-out, opacity .5s ease-in-out);
+    @include transition(opacity .3s ease-in-out);
     @include calc(margin-top, '5% + 4rem');
 
     position: relative;
