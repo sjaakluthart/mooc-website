@@ -96,7 +96,7 @@ article {
     font-family: $filosofia;
     font-size: 3.5rem;
     text-align: center;
-    color: $white;
+    color: $black;
 
     &.pinned {
       @include calc(top, '5% + 4rem');
