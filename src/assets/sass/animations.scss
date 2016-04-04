@@ -28,7 +28,17 @@
   }
 }
 
-@include keyframes(spinning) {
+@include keyframes(spin-minute) {
+  from {
+    @include transform(rotate(90deg));
+  }
+
+  to {
+    @include transform(rotate(450deg));
+  }
+}
+
+@include keyframes(spin-hour) {
   from {
     @include transform(rotate(0deg));
   }

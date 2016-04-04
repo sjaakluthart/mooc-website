@@ -447,9 +447,73 @@ nav {
   figcaption {
     margin-top: .5rem;
 
-    font-size: 2rem;
+    font-size: 1.9rem;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  #days::before {
+    content: '0 ';
+  }
+}
+
+#clock {
+  &.day5 {
+
+    .minute {
+      @include animation(spin-minute 3s linear infinite);
+    }
+
+    .hour {
+      @include animation(spin-hour 15s linear infinite);
+    }
+
+    #days::before {
+      content: '5 ';
+    }
+  }
+
+  &.day8 {
+    #days::before {
+      content: '8 ';
+    }
+  }
+
+  &.day20 {
+    #days::before {
+      content: '20 ';
+    }
+  }
+
+  &.day30 {
+    #days::before {
+      content: '30 ';
+    }
+  }
+
+  &.day60 {
+    #days::before {
+      content: '65 ';
+    }
+  }
+
+  &.day120 {
+    #days::before {
+      content: '120 ';
+    }
+  }
+
+  &.day165 {
+    #days::before {
+      content: '165 ';
+    }
+  }
+
+  &.paused {
+    .minute,
+    .hour {
+      @include animation-play-state(paused);
+    }
   }
 }
 
@@ -495,12 +559,6 @@ h1.pinned {
 
   pointer-events: none;
 
-  &.active {
-    opacity: 1;
-
-    pointer-events: all;
-  }
-
   width: auto;
   height: 90vh;
 
@@ -519,6 +577,17 @@ h1.pinned {
   box-shadow: 3px 3px 5px 0px transparentize($black, .55);
 
   z-index: 2;
+
+  &.active {
+    opacity: 1;
+
+    pointer-events: all;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .overview-item {

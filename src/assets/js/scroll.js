@@ -30,6 +30,12 @@ $(document).ready(function(){
   .addTo(controller);
 
   new ScrollMagic.Scene({
+    triggerElement: '#pre-production2'
+  })
+  .setClassToggle('#clock', 'day5')
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
     triggerElement: '#pre-production3'
   })
   .setClassToggle('.fade-in', 'active')
@@ -102,6 +108,12 @@ $(document).ready(function(){
   .addTo(controller);
 
   new ScrollMagic.Scene({
+    triggerElement: '#pre-production11-1'
+  })
+  .setClassToggle('#clock', 'day8')
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
     triggerElement: '#pre-production14'
   })
   .setClassToggle('.dart', 'active')
@@ -117,6 +129,12 @@ $(document).ready(function(){
     triggerElement: '#pre-production16'
   })
   .setClassToggle('#concept', 'pinned')
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#pre-production16'
+  })
+  .setClassToggle('#clock', 'day20')
   .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -141,6 +159,12 @@ $(document).ready(function(){
     triggerElement: '#pre-production21'
   })
   .setClassToggle('.paper', 'active')
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#pre-production21'
+  })
+  .setClassToggle('#clock', 'day30')
   .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -189,6 +213,12 @@ $(document).ready(function(){
     triggerElement: '#production2'
   })
   .setClassToggle('#flipboard-top', 'active')
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#production2'
+  })
+  .setClassToggle('#clock', 'day60')
   .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -263,6 +293,12 @@ $(document).ready(function(){
     triggerElement: '#execution'
   })
   .setClassToggle('#production-chapter', 'hide')
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#execution'
+  })
+  .setClassToggle('#clock', 'day120')
   .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -356,6 +392,12 @@ $(document).ready(function(){
   .addTo(controller);
 
   new ScrollMagic.Scene({
+    triggerElement: '#evaluation'
+  })
+  .setClassToggle('#clock', 'day165')
+  .addTo(controller);
+
+  new ScrollMagic.Scene({
     triggerElement: '#evaluation1'
   })
   .setClassToggle('.pages', 'active')
@@ -420,5 +462,11 @@ $(document).ready(function(){
   })
   .setClassToggle('#tips4', 'active')
   .addTo(controller);
+
+    new ScrollMagic.Scene({
+      triggerElement: '#evaluation6'
+    })
+    .setClassToggle('#clock', 'paused')
+    .addTo(controller);
 
 });
