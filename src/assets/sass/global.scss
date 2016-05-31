@@ -560,15 +560,11 @@ h1.pinned {
   pointer-events: none;
 
   width: auto;
-  height: 90vh;
+  height: 85vh;
 
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  margin: auto;
+  top: 10vh;
+  right: 5vh;
 
   background: $white;
 
@@ -590,7 +586,11 @@ h1.pinned {
   }
 }
 
-.overview-item {
+#PRE_PRODUCTION,
+#TEST,
+#PRODUCTION,
+#EXECUTION,
+#EVALUATION {
   cursor: pointer;
 }
 
