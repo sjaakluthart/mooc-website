@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+  var md = new MobileDetect(window.navigator.userAgent);
+
+  if (md.mobile() || md.tablet()) {
+    return false;
+  }
+
   var height = $( window ).height();
 
   // Init controller

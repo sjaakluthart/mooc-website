@@ -20,6 +20,7 @@
     "jquery": "^2.2.0",
     "scrollmagic": "^2.0.5",
     "elevator.js": "tholman/elevator.js",
-    "jquery.scrollTo": "^2.1.2"
+    "jquery.scrollTo": "^2.1.2",
+    "mobile-detect": "^1.3.2"
   }
 }
